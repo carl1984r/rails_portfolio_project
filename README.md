@@ -37,4 +37,4 @@ For more information, see the
 ## License
 
 The project is available as open source under the terms of the included MIT
-[License](LICENSE.md).
+[License](https://github.com/carl1984r/rails_portfolio_project/blob/master/LICENSE).
