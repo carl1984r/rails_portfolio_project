@@ -1,24 +1,40 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project description.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+Project setup.
 
-* System dependencies
+```
+$ commands
+```
 
-* Configuration
+Additional setup.
 
-* Database creation
+```
+$ commands
+```
 
-* Database initialization
+Additional setup.
 
-* How to run the test suite
+```
+$ commands
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Watch this video to learn more. [link text](url).
 
-* Deployment instructions
+View the blog about producing this app. [link text](url).
 
-* ...
+# Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/carl1984r/rails_portfolio_project.
+
+# Additional Information
+
+For more information, see the
+[Rails Assessment Lesson for Flatiron](https://github.com/learn-co-students/rails-assessment-v-000).
+
+## License
+
+The project is available as open source under the terms of the included MIT
+[License](LICENSE.md).
