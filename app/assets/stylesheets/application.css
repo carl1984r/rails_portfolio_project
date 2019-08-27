@@ -16,12 +16,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
 
-html {
-  height: 100%;
+span {
+  font-size: 1.5em;
+}
+
+p {
+  height: 50%;
   width: 100%;
   display: flex;
   position: fixed;
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 4.5em;
 }
