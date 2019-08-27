@@ -14,6 +14,7 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html {
   height: 100%;
@@ -22,4 +23,5 @@ html {
   position: fixed;
   align-items: center;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
