@@ -143,9 +143,9 @@ a:hover
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 150px;
-  padding-right: 75px;
-  padding-bottom: 300px;
-  background: #ededed;
+  padding-right: 15%;
+  padding-bottom: 100%;
+  background: #DCDCDC;
   opacity: 0.8;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -161,7 +161,7 @@ a:hover
 {
   padding: 15px 0;
   font-size: 2.5em;
-  font-weight: 350;
+  font-weight: 500;
 }
 
 #menuToggle input:checked ~ ul
