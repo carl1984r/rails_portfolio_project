@@ -39,6 +39,10 @@ body
   background: #FFFFFF;
   color: #000000;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a
@@ -139,8 +143,8 @@ a:hover
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 150px;
-  padding-bottom: 13.05em;
-
+  padding-right: 75px;
+  padding-bottom: 300px;
   background: #ededed;
   opacity: 0.8;
   list-style-type: none;
