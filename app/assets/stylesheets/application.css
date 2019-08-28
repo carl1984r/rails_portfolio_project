@@ -62,7 +62,7 @@ a:hover
 {
   display: block;
   position: relative;
-  top: 50px;
+  top: 2.6em;
   left: 50px;
 
   z-index: 1;
@@ -167,4 +167,14 @@ a:hover
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+#navRight
+{
+  float:right;
+  list-style-type: none;
+  font-size: 2.0em;
+  position: relative;
+  right: 1.1em;
+  top: 1.1em;
 }
