@@ -17,8 +17,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
 
 span {
-  border-left:2px solid #0000FF;
+  border-left:1px solid #0000FF;
   height: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 1.0em;
 }
 
 p {
