@@ -19,7 +19,6 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "#"(@user)
     else
       render :new
     end
@@ -27,6 +26,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :password, :password_confirmation)
   end
