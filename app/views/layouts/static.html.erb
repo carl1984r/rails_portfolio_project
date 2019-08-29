@@ -10,10 +10,12 @@
 
   <body>
 
-    <ul>
-      <li id="navRight""><a class="active" href="#about">Sign up</a></li>
-    </ul>
-    
+
+      <%= link_to "Login", "#", :method => "get", class: "navRight" %>
+        <li class="navRight">&nbsp&nbsp<span></span>&nbsp&nbsp</li>
+      <%= link_to "Sign up", new_user_path, :method => "get", class: "navRight" %>
+
+
     <nav role="navigation">
 
       <div id="menuToggle">

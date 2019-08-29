@@ -18,7 +18,7 @@
 
 span {
   border-left:2px solid #0000FF;
-  height: 1.5em;
+  height: 1.0em;
 }
 
 p {
@@ -169,7 +169,7 @@ a:hover
   transform: none;
 }
 
-#navRight
+.navRight
 {
   float:right;
   list-style-type: none;
