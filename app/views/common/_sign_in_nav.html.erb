@@ -10,8 +10,6 @@
 
   <body>
 
-      <%= link_to "« Back", root_path, :method => "get", class: "navRight" %>
-
     <nav role="navigation">
 
       <div id="menuToggle">
@@ -23,10 +21,9 @@
           <span></span>
 
         <ul id="menu">
-          <a href="/"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Info</li></a>
-          <a href="#"><li>Contact</li></a>
+          <li><%= link_to "Home »", root_path, :method => "get" %></li>
+          <a href="#"><li>About »</li></a>
+          <a href="#"><li>Info »</li></a>
         </ul>
       </div>
     </nav>
