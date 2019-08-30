@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+      <title>Project Title</title>
+      <%= stylesheet_link_tag 'application' %>
+
+  </head>
+
+  <body>
+
+      <%= link_to "« Back", root_path, :method => "get", class: "navRight" %>
+
+    <nav role="navigation">
+
+      <div id="menuToggle">
+
+        <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <ul id="menu">
+          <a href="/"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+  </body>
+
+</html>
