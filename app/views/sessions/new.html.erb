@@ -1,1 +1,9 @@
-<h1>Session Test</h1>
+
+<div class="test">
+  <h1>Login</h1><span id="vert"></span>
+  <%= form_for :session, url: login_path do |f| %>
+    <h4><%= f.label :username %>:</h4> <%= f.text_field :name %><br>
+    <h4><%= f.label :password %>:</h4> <%= f.password_field :password %><br><br>
+    <%= f.submit "Login" %>
+  <% end %>
+</div>
