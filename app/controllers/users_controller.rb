@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 
   def new
 
-    #if logged_in?
-      #redirect_to user_plural_path(current_user)
-    #else
+    if logged_in?
+      redirect_to user_bizlists_path(current_user)
+    else
       @user = User.new
-    #end
+    end
 
   end
 
