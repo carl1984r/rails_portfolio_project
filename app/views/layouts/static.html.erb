@@ -4,12 +4,13 @@
 
   <head>
 
-      <title>Project Title</title>
+      <title>bizrev</title>
       <%= stylesheet_link_tag 'application' %>
 
   </head>
 
   <body>
+
 
     <nav role="navigation">
 
@@ -29,6 +30,8 @@
       </div>
 
     </nav>
+
+    <%= content_tag(:span, 'Menu', class: "rel") %>
 
     <%= yield %>
 

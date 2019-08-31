@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def new
 
     if logged_in?
-      redirect_to user_watchlists_path(current_user)
+      #redirect_to user_plural_path(current_user)
     else
       @user = User.new
     end
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+      #redirect_to user_plural_path(@user)
     else
       render :new
     end

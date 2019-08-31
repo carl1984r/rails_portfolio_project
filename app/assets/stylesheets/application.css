@@ -193,6 +193,13 @@ a:hover
  margin-right: 1.0em;
 }
 
+.rel {
+  position: relative;
+  left: 100px;
+  top: 10px;
+  font-size: 1.7em;
+}
+
 .test {
   height: 80%;
   width: 100%;
