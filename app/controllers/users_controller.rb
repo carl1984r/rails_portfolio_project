@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 
   def new
 
-    if logged_in?
+    #if logged_in?
       #redirect_to user_plural_path(current_user)
-    else
+    #else
       @user = User.new
-    end
+    #end
 
   end
 
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      #redirect_to user_plural_path(@user)
+      redirect_to user_bizlists_path(@user)
     else
       render :new
     end
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require("/signup").permit(:name, :password, :password_confirmation)
+    params.require(:user).permit(:name, :password, :password_confirmation)
   end
 
 end
