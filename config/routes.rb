@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bizlists
   root 'welcome#index'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

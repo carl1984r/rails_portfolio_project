@@ -1,0 +1,2 @@
+class BizlistsController < ApplicationController
+end

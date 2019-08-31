@@ -1,0 +1,2 @@
+class Bizlist < ApplicationRecord
+end
