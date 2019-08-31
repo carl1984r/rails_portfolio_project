@@ -161,8 +161,9 @@ a:hover
   padding-top: 150px;
   padding-right: 15%;
   padding-bottom: 100%;
-  background: #DCDCDC;
+  background: #F5F5F5;
   opacity: 0.8;
+  border-right:1px solid #0000FF;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -177,7 +178,7 @@ a:hover
 {
   padding: 15px 0;
   font-size: 2.0em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #menuToggle input:checked ~ ul
@@ -197,6 +198,14 @@ a:hover
   position: relative;
   left: 100px;
   top: 10px;
+  font-size: 1.7em;
+}
+
+.rel_nav_right {
+  float:right;
+  position: relative;
+  right: 50px;
+  top: 11px;
   font-size: 1.7em;
 }
 
