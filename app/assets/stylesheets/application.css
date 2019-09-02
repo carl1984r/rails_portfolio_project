@@ -57,6 +57,7 @@ body
   font-family: 'Roboto', sans-serif;
   height: 100%;
   width: 100%;
+  position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -194,6 +195,20 @@ a:hover
  margin-right: 1.0em;
 }
 
+.alert_align {
+  font-size: 18px;
+  top: 16px;
+  left: 50%;
+  margin-left: -140px;
+  text-align: center;
+  position: absolute;
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari + Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
 .rel {
   position: relative;
   left: 100px;
@@ -218,3 +233,36 @@ a:hover
   justify-content: center;
   font-family: 'Roboto', sans-serif;
   font-size: 1.0em;}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
