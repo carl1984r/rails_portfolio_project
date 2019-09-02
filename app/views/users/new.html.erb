@@ -1,5 +1,13 @@
 <%= render 'common/sign_in_nav' %>
 
+<% if @user.errors.any? %>
+ <div>
+  <% @user.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <% end %>
+  </div>
+<% end %>
+
 <div class="test">
   <h1>Sign up for bizrev</h1><span id="vert"></span>
   <%= form_for @user do |f| %>
