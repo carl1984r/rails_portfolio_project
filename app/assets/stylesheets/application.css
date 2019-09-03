@@ -196,10 +196,10 @@ a:hover
 }
 
 .alert_align {
-  font-size: 18px;
-  top: 16px;
+  font-size: 12px;
+  top: 12px;
   left: 50%;
-  margin-left: -140px;
+  margin-left: -85px;
   text-align: center;
   position: absolute;
 

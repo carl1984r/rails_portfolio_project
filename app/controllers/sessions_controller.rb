@@ -10,12 +10,11 @@ class SessionsController < ApplicationController
 
   def create
 
-    user = User.find_by(name: params[:session][:name].downcase)
+    user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
       redirect_to user_bizlists_path(user)
     else
-      flash[:login_error] = "Incorrect email/password?  Try again."
       render :new
     end
 
