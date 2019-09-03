@@ -34,9 +34,12 @@ en:
     attributes:
       user:
         password: "Password"
+        email: "Email"
     errors:
       models:
         user:
           attributes:
             password:
-              blank: "is required."
+              blank: "is required"
+            email:
+              blank: "is required"
