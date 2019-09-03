@@ -164,7 +164,6 @@ a:hover
   padding-bottom: 100%;
   background: #F5F5F5;
   opacity: 0.8;
-  border-right:1px solid #0000FF;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -195,11 +194,25 @@ a:hover
  margin-right: 1.0em;
 }
 
-.alert_align {
+.alert_align1 {
   font-size: 12px;
   top: 12px;
   left: 50%;
   margin-left: -88px;
+  text-align: center;
+  position: absolute;
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari + Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+.alert_align2 {
+  font-size: 12px;
+  top: 30px;
+  left: 50%;
+  margin-left: -155px;
   text-align: center;
   position: absolute;
 

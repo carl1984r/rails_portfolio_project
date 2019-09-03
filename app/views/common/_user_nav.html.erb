@@ -32,12 +32,17 @@
     <%= content_tag(:span, 'Menu', class: "rel") %>
 
     <% if !!@user && @user.errors.any? %>
-      <div class="alert_align">
+      <div class="alert_align1">
         <% @user.errors.full_messages.each do |message| %>
         <h2><%= message %></h2>
       <% end %>
       </div>
+    <% elsif flash[:error] %>
+      <div class="alert_align2">
+        <h2><%= flash[:error] %></h2>
+      </div>
     <% end %>
+
 
     <%= yield %>
 
