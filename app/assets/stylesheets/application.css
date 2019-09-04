@@ -196,10 +196,10 @@ a:hover
 
 .alert_align1 {
   font-size: 12px;
-  top: 12px;
+  top: 255px;
   left: 50%;
-  margin-left: -88px;
-  text-align: center;
+  margin-left: 250px;
+  text-align: left;
   position: absolute;
 
   animation: fadein 2s;
@@ -213,7 +213,7 @@ a:hover
   top: 70px;
   left: 50%;
   margin-left: -155px;
-  text-align: center;
+  text-align: left;
   position: absolute;
 
   animation: fadein 2s;
