@@ -36,10 +36,12 @@
         <% @user.errors.full_messages.reverse.each do |message| %>
         <h2><%= message %></h2>
       <% end %>
+      <hr class="hr_color">
       </div>
     <% elsif flash[:error] %>
       <div class="alert_align2">
         <h2><%= flash[:error] %></h2>
+      <hr class="hr_color">
       </div>
     <% end %>
 

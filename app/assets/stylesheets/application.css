@@ -195,7 +195,7 @@ a:hover
 }
 
 .alert_align1 {
-  font-size: 11px;
+  font-size: 10px;
   top: 0px;
   left: 50%;
   margin-left: 42px;
@@ -220,6 +220,11 @@ a:hover
   -moz-animation: fadein 2s; /* Firefox */
   -webkit-animation: fadein 2s; /* Safari + Chrome */
   -o-animation: fadein 2s; /* Opera */
+}
+
+.hr_color
+{
+  border: 1px solid #0000FF;
 }
 
 .rel {
