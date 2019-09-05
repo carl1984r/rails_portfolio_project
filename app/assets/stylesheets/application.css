@@ -189,16 +189,16 @@ a:hover
 #vert
 {
  border-left:2px solid #0000FF;
- height: 20.0em;
+ height: 37em;
  margin-left: 1.0em;
  margin-right: 1.0em;
 }
 
 .alert_align1 {
-  font-size: 12px;
-  top: 255px;
+  font-size: 11px;
+  top: 0px;
   left: 50%;
-  margin-left: 250px;
+  margin-left: 42px;
   text-align: left;
   position: absolute;
 
@@ -209,10 +209,10 @@ a:hover
 }
 
 .alert_align2 {
-  font-size: 12px;
-  top: 292px;
+  font-size: 11px;
+  top: 0px;
   left: 50%;
-  margin-left: 250px;
+  margin-left: 30px;
   text-align: left;
   position: absolute;
 
