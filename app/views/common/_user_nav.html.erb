@@ -21,8 +21,10 @@
           <span></span>
 
         <ul id="menu">
-          <li><%= link_to "Home", root_path, :method => "get" %></li>
-          <li><%= link_to "Logout", logout_path, :method => "get" %> </li>
+            <li><%= link_to "Home", root_path, :method => "get" %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Logout", logout_path, :method => "get" %> </li>
+          <% end %>
         </ul>
       </div>
     </nav>

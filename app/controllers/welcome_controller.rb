@@ -1,9 +1,5 @@
 class WelcomeController < ApplicationController
 
- layout "static"
-
-  def index
-
-  end
+ layout "static"  
 
 end
