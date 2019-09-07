@@ -23,6 +23,7 @@
         <ul id="menu">
             <li><%= link_to "Home", root_path, :method => "get" %></li>
           <% if logged_in? %>
+            <li><%= link_to "My Favs", new_user_bizlist_path(current_user), :method => "get"%></li>
             <li><%= link_to "Logout", logout_path, :method => "get" %> </li>
           <% end %>
         </ul>
