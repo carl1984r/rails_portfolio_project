@@ -3,7 +3,16 @@
 
 
 <div class="row">
-  <div class="col">No content to display at this time.</div>
+  <div class="col">
+  <% if @bizlists.count == 0 %>
+    <p>No content to display at this time. Select Create List from the menu to add your favorite businesses.</p>
+  <% else %>
+    <% (@bizlists).each do |bizlist| %>
+          <%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %>
+          <%= bizlist.description %>
+    <% end %>
+  <% end %>
+  </div>
   <!--<span id="vertbar_4"></span>-->
   <div class="col">No content to display at this time.</div>
 </div>

@@ -5,4 +5,8 @@ class User < ApplicationRecord
   validates :username, presence: { message: "cannot be empty" }
   validates :email, presence: true, uniqueness: true
 
+  def favorite_businesses
+    #self.ratings.includes(:businesses).where(:businesses => { fav: true }).uniq
+  end
+
 end
