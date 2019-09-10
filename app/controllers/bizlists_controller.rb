@@ -13,6 +13,15 @@ class BizlistsController < ApplicationController
     @bizlist = Bizlist.new
   end
 
+  def create
+    @bizlist = @user.bizlists.build(bizlist_params)
+    if @bizlist.save
+      redirect_to user_bizlists_path(current_user)
+    else
+      render :new
+    end
+  end
+
   private
 
   def init_user
@@ -21,6 +30,10 @@ class BizlistsController < ApplicationController
 
   def init_username
     @username = current_user.username
+  end
+
+  def bizlist_params
+    params.require(:bizlist).permit(:name, :description, :user_id)
   end
 
   #def init_user_bizlist

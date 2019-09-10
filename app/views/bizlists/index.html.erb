@@ -9,23 +9,26 @@
       My Bizlists
     </div>
       <hr>
-    <div class="flex_footer">
-      No content to display at this time. Select Create List from the menu to add your favorite businesses.
+    <div>
+      Select Create List from the menu to add your favorite businesses.
     </div>
   <% else %>
-    <% (@bizlists).each do |bizlist| %>
-          <%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %>
-          <%= bizlist.description %>
+  <div class="flex_header">
+    My Bizlists
+  </div>
+  <hr class="hr_style">
+    <% @bizlists.each do |bizlist| %>
+          <br><div>Name:&nbsp<%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></div><br><div>Description:&nbsp<%= bizlist.description %></div><br><hr>
     <% end %>
   <% end %>
   </div>
-  <!--<span id="vertbar_4"></span>-->
   <div class="col mainbar">
     <div class="flex_header">
       My Content
     </div>
-      <hr>
+      <hr class="hr_style">
     <div>
+      <br>
       No content to display at this time. Select Create List from the menu to add your favorite businesses.
     </div>
   </div>
