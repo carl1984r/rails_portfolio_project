@@ -253,6 +253,7 @@ a:hover
 
 .sidebar {
   flex: 1;
+  padding-right: 2.0rem;
 }
 
 .mainbar {
