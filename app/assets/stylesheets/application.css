@@ -261,7 +261,7 @@ a:hover
 
 .flex_header {
   align-self: flex-start;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 
@@ -281,7 +281,7 @@ a:hover
 .rel_nav_right {
   float:right;
   position: relative;
-  right: 50px;
+  right: 45px;
   top: 13px;
   font-size: 1.4em;
   font-weight: bold;

@@ -1,0 +1,8 @@
+<div class="test"
+  <p><h2>Create Bizlist</h2></p><span id="vert"></span>
+    <%= form_for [user, bizlist] do |f| %>
+      <h3><%= f.label :name %></h3> <%= f.text_field :name %>
+      <h3><%= f.label :description %></h3> <%= f.text_area :description, :cols => 20, :rows => 5 %><br><br>
+      <%= f.submit %>
+    <% end %>
+</div>
