@@ -3,9 +3,15 @@
 
 
 <div class="row">
-  <div class="col">
+  <div class="col sidebar">
   <% if @bizlists.count == 0 %>
-    <p>No content to display at this time. Select Create List from the menu to add your favorite businesses.</p>
+    <div class="flex_header">
+      My Lists
+    </div>
+      <hr>
+    <div class="flex_footer">
+      No content to display at this time. Select Create List from the menu to add your favorite businesses.
+    </div>
   <% else %>
     <% (@bizlists).each do |bizlist| %>
           <%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %>
@@ -14,5 +20,13 @@
   <% end %>
   </div>
   <!--<span id="vertbar_4"></span>-->
-  <div class="col">No content to display at this time.</div>
+  <div class="col mainbar">
+    <div class="flex_header">
+      My Content
+    </div>
+      <hr>
+    <div>
+      No content to display at this time. Select Create List from the menu to add your favorite businesses.
+    </div>
+  </div>
 </div>
