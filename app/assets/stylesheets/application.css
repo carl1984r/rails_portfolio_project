@@ -248,6 +248,16 @@ a:hover
   -o-animation: fadein 2s; /* Opera */
 }
 
+.alert_align4 {
+  font-size: 12px;
+  text-align: left;
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari + Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
 .row {
   display: flex;
   align-items: center;

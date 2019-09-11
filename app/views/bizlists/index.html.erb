@@ -17,7 +17,15 @@
     My Bizlists
   </div>
   <hr class="hr_style">
-    <% @bizlists.each do |bizlist| %>
+    <br>
+  <% if flash[:message] %>
+    <div class="alert_align4">
+      <h2><%= flash[:message] %></h2>
+      <br>
+      <hr class="hr_color">
+    </div>
+  <% end %>
+    <% @bizlists.reverse.each do |bizlist| %>
           <br><div>Name:&nbsp<%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></div><br><div>Description:&nbsp<%= bizlist.description %></div><br><hr>
     <% end %>
   <% end %>

@@ -16,6 +16,7 @@ class BizlistsController < ApplicationController
   def create
     @bizlist = @user.bizlists.build(bizlist_params)
     if @bizlist.save
+      flash[:message] = "Bizlist Successfully Created"
       redirect_to user_bizlists_path(current_user)
     else
       render :new
