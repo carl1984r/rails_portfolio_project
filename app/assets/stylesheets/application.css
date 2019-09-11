@@ -234,6 +234,20 @@ a:hover
   -o-animation: fadein 2s; /* Opera */
 }
 
+.alert_align3 {
+  font-size: 11px;
+  top: 0px;
+  left: 50%;
+  margin-left: -3px;
+  text-align: left;
+  position: absolute;
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari + Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
 .row {
   display: flex;
   align-items: center;
