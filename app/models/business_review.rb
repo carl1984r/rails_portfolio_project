@@ -1,0 +1,2 @@
+class BusinessReview < ApplicationRecord
+end
