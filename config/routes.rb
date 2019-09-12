@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   resources :business_reviews
   resources :businesses
   resources :users, only: [:new, :create] do
