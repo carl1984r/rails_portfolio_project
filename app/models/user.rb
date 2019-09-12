@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   def favorite_businesses
-    #self.ratings.includes(:businesses).where(:businesses => { fav: true }).uniq
+    
   end
 
 end

@@ -2,7 +2,7 @@ class BizlistsController < ApplicationController
   before_action :require_login
   before_action :init_user
   before_action :init_username
-  #before_action :init_user_bizlist
+  before_action :init_user_bizlist
 
   def index
     @bizlists = current_user.bizlists
@@ -23,6 +23,10 @@ class BizlistsController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
 
   def init_user
@@ -37,12 +41,8 @@ class BizlistsController < ApplicationController
     params.require(:bizlist).permit(:name, :description, :user_id)
   end
 
-  #def init_user_bizlist
-    #@bizlist = Bizlist.find_by(id: params[:id])
-    #unless @bizlist.user == current_user
-      #flash[:danger] = "Some message"
-      #redirect_to bizlists_path
-    #end
-  #end
+  def init_user_bizlist
+    @bizlist = Bizlist.find_by(id: params[:id])
+  end
 
 end
