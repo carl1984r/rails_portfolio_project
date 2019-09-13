@@ -15,6 +15,10 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def show
+    @business = Business.find_by(id: params[:id])
+  end
+
   private
 
   def business_params

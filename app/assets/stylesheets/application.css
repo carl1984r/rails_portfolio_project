@@ -272,6 +272,20 @@ a:hover
   -o-animation: fadein 2s; /* Opera */
 }
 
+.biz_align {
+  top: -39px;
+  left: 0%;
+  text-align: left;
+  position: relative;
+}
+
+.biz_align_1 {
+  top: -18px;
+  left: 0%;
+  text-align: left;
+  position: relative;
+}
+
 .row {
   display: flex;
   align-items: center;

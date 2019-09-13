@@ -56,7 +56,7 @@
       </div>
     <% end %>
       <% @businesses.reverse.each do |business| %>
-            <br><div>Name:&nbsp<%= business.name %></div><br><div>Description:&nbsp<%= business.description %></div><br><div>Address:&nbsp<%= business.address %></div><br><hr>
+            <br><div>Name:&nbsp<%= link_to business.name, business_path(business) %></div><br><div>Description:&nbsp<%= business.description %></div><br><div>Address:&nbsp<%= business.address %></div><br><hr>
       <% end %>
     <% end %>
     </div>
