@@ -1,7 +1,7 @@
 <div class="add-button">
   <div class="sub-button tl"></div>
   <div><%= link_to "add", user_bizlists_path(current_user), :method => "get", class: "sub-button tl" %></div>
-  <div><%= link_to "delete", user_bizlists_path(current_user), :method => "get", class: "sub-button tr" %></div>
   <div><%= link_to "edit", edit_user_bizlist_path(current_user, @bizlist), :method => "get", class: "sub-button bl" %></div>
   <div><%= link_to "index", user_bizlists_path(current_user), :method => "get", class: "sub-button br" %></div>
+  <div><%= link_to "delete", user_bizlist_path(current_user), method: :delete, class: "sub-button tr" %></div>
 </div>

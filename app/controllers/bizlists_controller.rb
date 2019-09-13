@@ -34,6 +34,17 @@ class BizlistsController < ApplicationController
    end
  end
 
+ def destroy
+    if @bizlist
+      @bizlist.destroy
+      redirect_to user_bizlists_path(current_user)
+      flash[:biz_delete] = "Bizlist deleted"
+    else
+      render :show
+      flash[:biz_error] = "This bizlist could not be deleted"
+    end
+  end
+
   private
 
   def init_user
