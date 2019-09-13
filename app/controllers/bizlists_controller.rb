@@ -24,9 +24,15 @@ class BizlistsController < ApplicationController
     end
   end
 
-  def show
-
-  end
+  def update
+   @bizlist.update(bizlist_params)
+   if @bizlist.save
+     redirect_to bizlist_path(@bizlist)
+     flash[:biz_updated] = "Bizlist updated"
+   else
+     render :edit
+   end
+ end
 
   private
 

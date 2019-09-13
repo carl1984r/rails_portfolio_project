@@ -358,6 +358,18 @@ a:hover
   font-weight: bold;
 }
 
+.test_1 {
+  left: 50%;
+  margin-left: -237px;
+  top: 15px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.0em;
+  font-weight: bold;
+}
 
 .add-button {
   position: absolute;
