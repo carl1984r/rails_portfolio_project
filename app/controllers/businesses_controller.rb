@@ -8,7 +8,7 @@ class BusinessesController < ApplicationController
   def create
     @business = Business.new(business_params)
     if @business.save
-      flash[:message] = "Business successfully added"
+      flash[:business] = "Business successfully added"
       redirect_to user_bizlists_path(current_user)
     else
       render :new

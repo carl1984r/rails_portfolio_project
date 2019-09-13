@@ -8,7 +8,8 @@
     <div class="flex_header">
       My Bizlists
     </div>
-      <hr>
+      <hr class="hr_style">
+      <br>
     <div>
       Select Create List from the menu to add your favorite businesses.
     </div>
@@ -30,14 +31,32 @@
     <% end %>
   <% end %>
   </div>
+
   <div class="col mainbar">
+    <% if @businesses.count == 0 %>
+      <div class="flex_header">
+        Business Index
+      </div>
+        <hr class="hr_style">
+        <br>
+      <div>
+        Select Add a Business from the menu to add a new business.
+      </div>
+    <% else %>
     <div class="flex_header">
       Business Index
     </div>
-      <hr class="hr_style">
-    <div>
+    <hr class="hr_style">
       <br>
-      Select Add a Business from the menu to create a new business.
+    <% if flash[:business] %>
+      <div class="alert_align4">
+        <h2><%= flash[:business] %></h2>
+        <br>
+        <hr class="hr_color">
+      </div>
+    <% end %>
+      <% @businesses.reverse.each do |business| %>
+            <br><div>Name:&nbsp<%= business.name %></div><br><div>Description:&nbsp<%= business.description %></div><br><div>Address:&nbsp<%= business.address %></div><br><hr>
+      <% end %>
+    <% end %>
     </div>
-  </div>
-</div>
