@@ -23,8 +23,10 @@ class SessionsController < ApplicationController
 
     if logged_in?
       session.clear
+      flash[:logged_out] = "Logged out"
       redirect_to '/'
     else
+
       redirect_back(fallback_location: root_path)
     end
 
