@@ -7,8 +7,8 @@
   </div>
 <% end %>
 
-<div class="test test_1">
-  <p><h2>Create/Update Bizlist</h2></p><span id="vert"></span>
+<div class="test test_2">
+  <p><h2><%= "#{params[:action].titleize}" %> Bizlist</h2></p><span id="vert"></span>
     <%= form_for [user, bizlist] do |f| %>
       <h3><%= f.label :name %></h3> <%= f.text_field :name %>
       <h3><%= f.label :description %></h3> <%= f.text_area :description, :cols => 20, :rows => 5 %><br><br>

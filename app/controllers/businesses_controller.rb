@@ -1,5 +1,6 @@
 class BusinessesController < ApplicationController
   before_action :require_login
+  before_action :init_username
 
   def new
     @business = Business.new
@@ -23,6 +24,10 @@ class BusinessesController < ApplicationController
 
   def business_params
     params.require(:business).permit( :name, :address, :description )
+  end
+
+  def init_username
+    @username = current_user.username
   end
 
 end
