@@ -27,6 +27,8 @@
             <li><%= link_to "Create List", new_user_bizlist_path(current_user), :method => "get"%></li>
             <li><%= link_to "Add a Business", new_business_path, :method => "get" %></li>
             <li><%= link_to "Logout", logout_path, :method => "get" %></li>
+          <% else %>
+            <li><%= link_to "Back", root_path, :method => "get" %></li>
           <% end %>
         </ul>
       </div>
