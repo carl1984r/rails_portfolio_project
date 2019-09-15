@@ -43,9 +43,9 @@
       <% end %>
       <hr class="hr_color">
       </div>
-    <% elsif flash[:error] %>
+    <% elsif flash[:error] || flash[:biz_updated] %>
       <div class="alert_align2">
-        <h2><%= flash[:error] %></h2>
+        <h2><%= flash[:error] || flash[:biz_updated] %></h2>
       <hr class="hr_color">
       </div>
     <% end %>
