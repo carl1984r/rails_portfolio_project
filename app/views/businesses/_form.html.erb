@@ -1,7 +1,7 @@
 <%= render 'common/user_nav' %>
 
 <% if business.errors.any? %>
-  <div class="alert_align5">
+  <div class="alert_align3">
       <% business.errors.full_messages.each do |msg| %>
         <h2><%= msg %></h2>
       <% end %>
@@ -9,12 +9,12 @@
   </div>
 <% end %>
 
-<div class="test">
-  <h2>Add a Business</h2><span id="vert"></span>
+<div class="test test_2">
+  <h2><%= "#{params[:action].titleize}" %> Business</h2><span id="vert"></span>
   <%= form_for @business do |f| %>
     <h3><%= f.label :name %></h3> <%= f.text_field :name %>
     <h3><%= f.label :address %></h3> <%= f.text_field :address %>
     <h3><%= f.label :description %></h3> <%= f.text_area :description, :cols => 20, :rows => 5 %><br><br>
-    <%= f.submit "Create" %>
+    <%= f.submit %>
   <% end %>
 </div>

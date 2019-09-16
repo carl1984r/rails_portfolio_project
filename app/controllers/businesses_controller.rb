@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   before_action :require_login
   before_action :init_username
+  before_action :init_business
 
   def new
     @business = Business.new
@@ -28,6 +29,10 @@ class BusinessesController < ApplicationController
 
   def init_username
     @username = current_user.username
+  end
+
+  def init_business
+    @business= Business.find_by(id: params[:id])
   end
 
 end
