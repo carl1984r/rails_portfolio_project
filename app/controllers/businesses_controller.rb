@@ -20,7 +20,7 @@ class BusinessesController < ApplicationController
   def update
    @business.update(business_params)
    if @business.save
-     redirect_to user_bizlists_path(current_user)
+     redirect_to business_path(@business)
      flash[:business_updated] = "Business updated"
    else
      render :edit
