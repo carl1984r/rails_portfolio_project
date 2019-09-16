@@ -25,7 +25,7 @@
           <% if logged_in? %>
             <li><%= link_to "Biz Index", user_bizlists_path(current_user), :method => "get" %></li>
             <li><%= link_to "Create Bizlist", new_user_bizlist_path(current_user), :method => "get"%></li>
-            <li><%= link_to "Add a Business", new_business_path, :method => "get" %></li>
+            <li><%= link_to "Add a Biz", new_business_path, :method => "get" %></li>
             <li><%= link_to "Logout", logout_path, :method => "get" %></li>
           <% else %>
             <li><%= link_to "Back", root_path, :method => "get" %></li>
