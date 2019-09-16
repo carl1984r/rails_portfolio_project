@@ -48,9 +48,9 @@
     </div>
     <hr class="hr_style">
       <br>
-    <% if flash[:business] %>
+    <% if flash[:business] || flash[:business_updated] %>
       <div class="alert_align4">
-        <h2><%= flash[:business] %></h2>
+        <h2><%= flash[:business] || flash[:business_updated] %></h2>
         <br>
         <hr class="hr_color">
       </div>

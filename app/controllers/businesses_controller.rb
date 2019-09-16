@@ -17,6 +17,16 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def update
+   @business.update(business_params)
+   if @business.save
+     redirect_to user_bizlists_path(current_user)
+     flash[:business_updated] = "Business updated"
+   else
+     render :edit
+   end
+ end
+
   def show
     @business = Business.find_by(id: params[:id])
   end
