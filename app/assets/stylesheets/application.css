@@ -278,7 +278,7 @@ a:hover
 }
 
 .biz_align {
-  top: 113px;
+  top: 265px;
   left: 16%;
   margin-left: 113px;
   text-align: left;
@@ -407,7 +407,7 @@ a:hover
 .sub-button {
   position: absolute;
   display: inline-block;
-  background-color: #9B1B30;
+  background-color: #2F4F4F;
   color: rgba(255,255,255,0);
   width: 28px;
   height: 28px;
