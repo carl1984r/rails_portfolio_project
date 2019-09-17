@@ -279,8 +279,9 @@ a:hover
 
 .biz_align {
   top: 113px;
-  left: 50%;
-  margin-left: -349px;
+  left: 16%;
+  margin-left: 113px;
+  text-align: left;
   position: absolute;
 }
 

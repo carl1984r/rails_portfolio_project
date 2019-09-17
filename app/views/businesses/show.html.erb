@@ -15,6 +15,13 @@
        </div>
          <hr class="hr_style">
          <br>
+         <% if flash[:business_updated] %>
+           <div class="alert_align4">
+             <h2><%= flash[:business_updated] %></h2>
+             <br>
+             <hr class="hr_color">
+           </div>
+         <% end %>
        <div>
          <h2><%= @business.name %></h2><hr>
          <p><%= @business.description %></p>
