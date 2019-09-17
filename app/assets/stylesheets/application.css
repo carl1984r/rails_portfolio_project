@@ -273,15 +273,15 @@ a:hover
 }
 
 .alert_align6 {
-  top: 19px;  
+  top: 19px;
   margin-left: -40px;
 }
 
 .biz_align {
-  top: -39px;
-  left: 0%;
-  text-align: left;
-  position: relative;
+  top: 113px;
+  left: 50%;
+  margin-left: -349px;
+  position: absolute;
 }
 
 .biz_align_1 {
@@ -406,13 +406,14 @@ a:hover
 .sub-button {
   position: absolute;
   display: inline-block;
-  background-color:#2F4F4F;
+  background-color: #9B1B30;
   color: rgba(255,255,255,0);
   width: 28px;
   height: 28px;
   line-height:48px;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
   -webkit-transition: top .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
     left .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
     bottom .2s cubic-bezier(.58,-0.37,.45,1.46) .2s,
