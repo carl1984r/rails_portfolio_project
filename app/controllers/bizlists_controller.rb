@@ -6,7 +6,6 @@ class BizlistsController < ApplicationController
 
   def index
     @bizlists = current_user.bizlists
-    @faves = current_user.favorite_businesses
     @businesses = Business.all
   end
 

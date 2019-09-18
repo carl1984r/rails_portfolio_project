@@ -34,7 +34,7 @@ class BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit( :name, :address, :description )
+    params.require(:business).permit( :name, :address, :description, :bizlist_id )
   end
 
   def init_username
