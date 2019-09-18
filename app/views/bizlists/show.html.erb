@@ -1,12 +1,36 @@
 <%= render 'common/user_nav' %>
 
-<div class="test">
-  <div class="biz_align">
-    <%= render 'common/bizlist_show_menu' %>
-  </div>
-   <span id="vert"></span>
-   <div class="biz_align_1">
-     <h1><%= @bizlist.name %></h1><hr>
-     <p><%= @bizlist.description %></p>
-   </div>
+<div class="biz_align">
+  <%= render 'common/bizlist_show_menu' %>
 </div>
+
+   <div class="row">
+     <div class="col sidebar">
+       <div class="flex_header">
+         Bizlist
+       </div>
+         <hr class="hr_style">
+         <br>
+         <% if flash[:biz_updated] %>
+           <div class="alert_align4">
+             <h2><%= flash[:biz_updated] %></h2>
+             <br>
+             <hr class="hr_color">
+           </div>
+         <% end %>
+       <div>
+         <h2><%= @bizlist.name %></h2><hr>
+         <p><%= @bizlist.description %></p>
+       </div>
+     </div>
+
+     <div class="col mainbar">
+         <div class="flex_header">
+           Biz contained within this bizlist.
+         </div>
+           <hr class="hr_style">
+           <br>
+         <div>
+           No businesses have been added to this bizlist.
+         </div>
+       </div>

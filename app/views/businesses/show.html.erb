@@ -1,15 +1,11 @@
 <%= render 'common/user_nav' %>
 
-
-  <!-- <div>
-     <h1><%= @business.name %></h1><hr>
-     <p><%= @business.description %></p>
-     <p><%= @business.address %></p>
-   </div>-->
+<div class="biz_align">
+  <%= render 'common/business_show_menu' %>
+</div>
 
    <div class="row">
      <div class="col sidebar">
-     <% if @business %>
        <div class="flex_header">
          Biz
        </div>
@@ -27,50 +23,15 @@
          <p><%= @business.description %></p>
          <p><%= @business.address %></p>
        </div>
-     <% else %>
-     <div class="flex_header">
-       My Bizlists
-     </div>
-     <hr class="hr_style">
-       <br>
-     <% if flash[:message] || flash[:biz_delete] %>
-       <div class="alert_align4">
-         <h2><%= flash[:message] || flash[:biz_delete] %></h2>
-         <br>
-         <hr class="hr_color">
-       </div>
-     <% end %>
-
-     <% end %>
      </div>
 
      <div class="col mainbar">
-       <% if @business %>
          <div class="flex_header">
-           My bizists containing this business
+           My bizlists containing this business
          </div>
            <hr class="hr_style">
            <br>
          <div>
            This business has not been added to any of your bizlists
          </div>
-       <% else %>
-       <div class="flex_header">
-         Biz Index
        </div>
-       <hr class="hr_style">
-         <br>
-       <% if flash[:business] %>
-         <div class="alert_align4">
-           <h2><%= flash[:business] %></h2>
-           <br>
-           <hr class="hr_color">
-         </div>
-       <% end %>
-
-       <% end %>
-       </div>
-
-<div class="biz_align">
-  <%= render 'common/business_show_menu' %>
-</div>
