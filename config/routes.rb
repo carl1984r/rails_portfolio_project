@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :business_reviews
   resources :businesses
   resources :users, only: [:new, :create] do
-    resources :bizlists
+    resources :bizlists do
+      get 'add', to: 'bizlists#add'
+    end
   end
   resources :bizlists
   root 'welcome#index'

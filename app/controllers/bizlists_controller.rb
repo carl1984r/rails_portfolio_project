@@ -13,6 +13,10 @@ class BizlistsController < ApplicationController
     @bizlist = Bizlist.new
   end
 
+  def add
+    @bizlist = Bizlist.find_by(id: params[:bizlist_id])
+  end
+
   def create
     @bizlist = @user.bizlists.build(bizlist_params)
     if @bizlist.save
@@ -24,6 +28,10 @@ class BizlistsController < ApplicationController
   end
 
   def update
+  if !!Business.find_by(id: params[:bizlist]['add_to']) && !@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
+   @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
+   redirect_to bizlist_path(@bizlist)
+  else
    @bizlist.update(bizlist_params)
    if @bizlist.save
      redirect_to bizlist_path(@bizlist)
@@ -31,6 +39,7 @@ class BizlistsController < ApplicationController
    else
      render :edit
    end
+  end
  end
 
  def destroy
@@ -61,5 +70,5 @@ class BizlistsController < ApplicationController
   def init_user_bizlist
     @bizlist = Bizlist.find_by(id: params[:id])
   end
-
+#Business.find_by(id: params[:bizlist]['add_to'])
 end
