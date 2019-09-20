@@ -30,9 +30,9 @@
          </div>
            <hr class="hr_style">
            <br>
-           <% if flash[:biz_added] %>
+           <% if flash[:biz_added] || flash[:biz_present]%>
              <div class="alert_align4">
-               <h2><%= flash[:biz_added] %></h2>
+               <h2><%= flash[:biz_added] || flash[:biz_present]%></h2>
                <br>
                <hr class="hr_color">
              </div>

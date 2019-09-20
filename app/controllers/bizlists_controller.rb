@@ -32,6 +32,10 @@ class BizlistsController < ApplicationController
       @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
       redirect_to bizlist_path(@bizlist)
       flash[:biz_added] = "Biz successfully added to this bizlist"
+    elsif
+      !!@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
+      redirect_to bizlist_path(@bizlist)
+      flash[:biz_present] = "Biz already added to this bizlist"
     else
       @bizlist.update(bizlist_params)
         if @bizlist.save
