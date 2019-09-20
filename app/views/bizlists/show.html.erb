@@ -30,6 +30,13 @@
          </div>
            <hr class="hr_style">
            <br>
+           <% if flash[:biz_added] %>
+             <div class="alert_align4">
+               <h2><%= flash[:biz_added] %></h2>
+               <br>
+               <hr class="hr_color">
+             </div>
+           <% end %>
          <div>
            <% if @bizlist.businesses.count == 0 %>
                No businesses have been added to this bizlist.

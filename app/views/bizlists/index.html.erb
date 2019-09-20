@@ -19,9 +19,9 @@
   </div>
   <hr class="hr_style">
     <br>
-  <% if flash[:message] || flash[:biz_delete] %>
+  <% if flash[:message] || flash[:biz_delete] || flash[:warning]%>
     <div class="alert_align4">
-      <h2><%= flash[:message] || flash[:biz_delete] %></h2>
+      <h2><%= flash[:message] || flash[:biz_delete] || flash[:warning] %></h2>
       <br>
       <hr class="hr_color">
     </div>

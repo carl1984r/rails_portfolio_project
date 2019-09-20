@@ -2,7 +2,7 @@ class BizlistsController < ApplicationController
   before_action :require_login
   before_action :init_user
   before_action :init_username
-  before_action :init_user_bizlist
+  before_action :init_user_bizlist, only: [:show, :edit, :update, :destroy]
 
   def index
     @bizlists = current_user.bizlists
@@ -28,18 +28,19 @@ class BizlistsController < ApplicationController
   end
 
   def update
-  if !!Business.find_by(id: params[:bizlist]['add_to']) && !@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
-   @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
-   redirect_to bizlist_path(@bizlist)
-  else
-   @bizlist.update(bizlist_params)
-   if @bizlist.save
-     redirect_to bizlist_path(@bizlist)
-     flash[:biz_updated] = "Bizlist updated"
-   else
-     render :edit
-   end
-  end
+    if !!Business.find_by(id: params[:bizlist]['add_to']) && !@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
+      @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
+      redirect_to bizlist_path(@bizlist)
+      flash[:biz_added] = "Biz successfully added to this bizlist"
+    else
+      @bizlist.update(bizlist_params)
+        if @bizlist.save
+          redirect_to bizlist_path(@bizlist)
+            flash[:biz_updated] = "Bizlist updated"
+        else
+          render :edit
+        end
+    end
  end
 
  def destroy
@@ -69,6 +70,9 @@ class BizlistsController < ApplicationController
 
   def init_user_bizlist
     @bizlist = Bizlist.find_by(id: params[:id])
+    unless !!@bizlist && (@bizlist.user_id == current_user.id)
+      flash[:warning] = "This is not your bizlist"
+      redirect_to bizlists_path
+    end
   end
-#Business.find_by(id: params[:bizlist]['add_to'])
 end

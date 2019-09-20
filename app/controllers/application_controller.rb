@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
-      flash[:login] = "Please login to view content."
+      flash[:login] = "Please login to view content"
       redirect_to login_path
     end
   end
