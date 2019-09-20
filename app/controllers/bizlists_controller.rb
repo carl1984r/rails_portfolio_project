@@ -71,7 +71,7 @@ class BizlistsController < ApplicationController
   def init_user_bizlist
     @bizlist = Bizlist.find_by(id: params[:id])
     unless !!@bizlist && (@bizlist.user_id == current_user.id)
-      flash[:warning] = "This is not your bizlist"
+      flash[:warning] = "No bizlist noted"
       redirect_to bizlists_path
     end
   end
