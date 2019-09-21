@@ -30,16 +30,16 @@
          </div>
            <hr class="hr_style">
            <br>
-           <% if flash[:biz_added] || flash[:biz_present]%>
+           <% if flash[:biz_added] || flash[:biz_present] || flash[:biz_removed] || flash[:biz_not_present] %>
              <div class="alert_align4">
-               <h2><%= flash[:biz_added] || flash[:biz_present]%></h2>
+               <h2><%= flash[:biz_added] || flash[:biz_present] || flash[:biz_removed] || flash[:biz_not_present] %></h2>
                <br>
                <hr class="hr_color">
              </div>
            <% end %>
          <div>
            <% if @bizlist.businesses.count == 0 %>
-               No businesses have been added to this bizlist.
+              <br>No businesses have been added to this bizlist.
            <% else %>
                <% @bizlist.businesses.reverse.each do |business| %>
                      <br><div>Name:&nbsp<%= link_to business.name, business_path(business) %></div><br><div>Description:&nbsp<%= business.description %></div><br><div>Address:&nbsp<%= business.address %></div><br><hr>

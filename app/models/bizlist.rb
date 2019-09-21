@@ -8,4 +8,7 @@ class Bizlist < ApplicationRecord
   def add_to
   end
 
+  def remove_from
+  end
+
 end

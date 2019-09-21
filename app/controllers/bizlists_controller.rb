@@ -17,6 +17,14 @@ class BizlistsController < ApplicationController
     @bizlist = Bizlist.find_by(id: params[:bizlist_id])
   end
 
+  def remove
+    @bizlist = Bizlist.find_by(id: params[:bizlist_id])
+    if !@bizlist.businesses.any?
+      redirect_to bizlist_path(@bizlist)
+      flash[:biz_not_present] = "No biz to remove from this bizlist"
+    end
+  end
+
   def create
     @bizlist = @user.bizlists.build(bizlist_params)
     if @bizlist.save
@@ -36,6 +44,12 @@ class BizlistsController < ApplicationController
       !!@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
       redirect_to bizlist_path(@bizlist)
       flash[:biz_present] = "Biz already added to this bizlist"
+    elsif !!params[:bizlist]['remove_from']
+      remove = @bizlist.businesses.find_by(id: params[:bizlist]['remove_from'])
+      remove.bizlist_id = nil
+      remove.save
+      redirect_to bizlist_path(@bizlist)
+      flash[:biz_removed] = "Biz removed from this bizlist"
     else
       @bizlist.update(bizlist_params)
         if @bizlist.save

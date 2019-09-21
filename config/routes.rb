@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create] do
     resources :bizlists do
       get 'add', to: 'bizlists#add'
+      get 'remove', to: 'bizlists#remove'
     end
   end
   resources :bizlists
