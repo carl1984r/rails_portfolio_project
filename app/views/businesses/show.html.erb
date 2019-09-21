@@ -35,7 +35,7 @@
            <% if @business.bizlist %>
              <br><div>Name:&nbsp<%= link_to @business.bizlist.name, user_bizlist_path(current_user, @business.bizlist) %></div><br><div>Description:&nbsp<%= @business.bizlist.description %></div><br><hr>
            <% else %>
-              This business has not been added to any of your bizlists
+              This biz has not been added to any of your bizlists
            <% end %>
          </div>
        </div>

@@ -34,6 +34,9 @@ class BusinessesController < ApplicationController
 
   def show
     @business = Business.find_by(id: params[:id])
+    if !@business
+      redirect_to user_bizlists_path(current_user)
+    end
   end
 
   private
