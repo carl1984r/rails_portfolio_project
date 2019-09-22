@@ -1,7 +1,0 @@
-<div class="test test_4">
-  <p><h2>Add Biz to My Bizlist</h2></p><span id="vert"></span>
-    <%= form_for business do |f| %>
-    <%= f.collection_select :bizlist_id, Bizlist.all, :id, :name %>
-      <%= f.submit %>
-    <% end %>
-</div>

@@ -18,10 +18,6 @@ class BusinessesController < ApplicationController
     end
   end
 
-  def add
-    @business = Business.find_by(id: params[:business_id])
-  end
-
   def update
    @business.update(business_params)
    if @business.save

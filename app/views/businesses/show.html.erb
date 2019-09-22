@@ -27,15 +27,11 @@
 
      <div class="col mainbar">
          <div class="flex_header">
-           Bizlist
+           Biz Reviews
          </div>
            <hr class="hr_style">
            <br>
          <div>
-           <% if @business.bizlist %>
-             <br><div>Name:&nbsp<%= link_to @business.bizlist.name, user_bizlist_path(current_user, @business.bizlist) %></div><br><div>Description:&nbsp<%= @business.bizlist.description %></div><br><hr>
-           <% else %>
-              This biz has not been added to any of your bizlists
-           <% end %>
+              This biz has not been reviewed
          </div>
        </div>
