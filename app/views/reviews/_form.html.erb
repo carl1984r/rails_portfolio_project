@@ -1,0 +1,9 @@
+<div class="test test_5">
+    <p><h2><%= "#{params[:action].titleize}" %> Review </h2></p><span id="vert"></span>
+    <%= form_for [business, review] do |f| %>
+      <h3><%= f.label :experience %></h3> <%= f.select :experience, options_for_select((1..5).to_a.reverse) %>
+      <h3><%= f.label :location %></h3> <%= f.select :location, options_for_select((1..5).to_a.reverse) %>
+      <h3><%= f.label :value %></h3> <%= f.select :value, options_for_select((1..5).to_a.reverse) %><br><br>
+      <%= f.submit %>
+    <% end %>
+</div>
