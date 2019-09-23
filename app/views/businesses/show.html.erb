@@ -31,6 +31,14 @@
          </div>
            <hr class="hr_style">
            <br>
+           <% if flash[:review_created] %>
+             <div class="alert_align4">
+               <h2><%= flash[:review_created] %></h2>
+               <br>
+               <hr class="hr_color">
+             </div>
+           <% end %>
+           <br>
          <div>
               This biz has not been reviewed
          </div>
