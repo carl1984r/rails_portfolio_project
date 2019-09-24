@@ -1,3 +1,10 @@
+<% if flash[:review_error] %>
+  <div class="alert_align2 review_error_align">
+    <h2><%= flash[:review_error] %></h2>
+  <hr class="hr_color">
+  </div>
+<% end %>
+
 <div class="test test_5">
     <p><h2 class="spacer"><%= "#{params[:action].titleize}" %> Review </h2></p><span id="vert"></span>
     <%= form_for [business, review] do |f| %>

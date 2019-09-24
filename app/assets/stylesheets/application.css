@@ -272,6 +272,10 @@ a:hover
   -o-animation: fadein 2s; /* Opera */
 }
 
+.review_error_align {
+  margin-left: 22px;
+}
+
 .biz_align {
   top: 265px;
   left: 16%;

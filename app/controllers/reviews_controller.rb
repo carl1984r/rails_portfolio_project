@@ -8,12 +8,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    if @business.reviews << @review
+    if !!params[:review] && !!params[:review][:experience] && !!params[:review][:location] && !!params[:review][:value]
+      @review = Review.new(review_params)
+      @business.reviews << @review
       flash[:review_created] = "Review successfully created"
       redirect_to business_path(@business)
     else
-      render :new
+      flash[:review_error] = "Review form must be completed"
+      redirect_to new_business_review_path(@business)
     end
   end
 
