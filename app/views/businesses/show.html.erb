@@ -40,6 +40,12 @@
            <% end %>
            <br>
          <div>
+           <% if @business.reviews.any? %>
+             <% @business.reviews.reverse.each do |review| %>
+               <br><div>Experience:&nbsp<%= review.experience %></div><br><div>Location:&nbsp<%= review.location %></div><br><div>Value:&nbsp<%= review.value %></div><br><hr>
+             <% end %>
+           <% else %>
               This biz has not been reviewed
+           <% end %>
          </div>
        </div>

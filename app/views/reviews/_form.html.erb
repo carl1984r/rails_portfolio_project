@@ -1,9 +1,32 @@
 <div class="test test_5">
-    <p><h2><%= "#{params[:action].titleize}" %> Review </h2></p><span id="vert"></span>
+    <p><h2 class="spacer"><%= "#{params[:action].titleize}" %> Review </h2></p><span id="vert"></span>
     <%= form_for [business, review] do |f| %>
-      <h3><%= f.label :experience %></h3> <%= f.select :experience, options_for_select((1..5).to_a.reverse) %>
-      <h3><%= f.label :location %></h3> <%= f.select :location, options_for_select((1..5).to_a.reverse) %>
-      <h3><%= f.label :value %></h3> <%= f.select :value, options_for_select((1..5).to_a.reverse) %><br><br>
+    <fieldset class="rating">
+      <legend><h3>Experience:</h3></legend>
+      <%= f.radio_button(:experience, "5") %> <%= f.label(:experience.to_s + "_5", "Rocks") %>
+      <%= f.radio_button(:experience, "4") %> <%= f.label(:experience.to_s + "_4", "Pretty good") %>
+      <%= f.radio_button(:experience, "3") %> <%= f.label(:experience.to_s + "_3", "Meh") %>
+      <%= f.radio_button(:experience, "2") %> <%= f.label(:experience.to_s + "_2", "Kinda bad") %>
+      <%= f.radio_button(:experience, "1") %> <%= f.label(:experience.to_s + "_1", "Sucks big time") %>
+    </fieldset><br>
+    <fieldset class="rating">
+      <legend><h3>Location:</h3></legend>
+      <%= f.radio_button(:location, "5") %> <%= f.label(:location.to_s + "_5", "Rocks") %>
+      <%= f.radio_button(:location, "4") %> <%= f.label(:location.to_s + "_4", "Pretty good") %>
+      <%= f.radio_button(:location, "3") %> <%= f.label(:location.to_s + "_3", "Meh") %>
+      <%= f.radio_button(:location, "2") %> <%= f.label(:location.to_s + "_2", "Kinda bad") %>
+      <%= f.radio_button(:location, "1") %> <%= f.label(:location.to_s + "_1", "Sucks big time") %>
+    </fieldset><br>
+    <fieldset class="rating">
+      <legend><h3>Value:</h3></legend>
+      <%= f.radio_button(:value, "5") %> <%= f.label(:value.to_s + "_5", "Rocks") %>
+      <%= f.radio_button(:value, "4") %> <%= f.label(:value.to_s + "_4", "Pretty good") %>
+      <%= f.radio_button(:value, "3") %> <%= f.label(:value.to_s + "_3", "Meh") %>
+      <%= f.radio_button(:value, "2") %> <%= f.label(:value.to_s + "_2", "Kinda bad") %>
+      <%= f.radio_button(:value, "1") %> <%= f.label(:value.to_s + "_1", "Sucks big time") %>
+    </fieldset><br><br>
+    <fieldset class="rating_1">
       <%= f.submit %>
+    </fieldset>
     <% end %>
 </div>
