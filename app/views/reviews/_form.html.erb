@@ -33,6 +33,7 @@
       <%= f.radio_button(:value, "1") %> <%= f.label(:value.to_s + "_1", "Sucks big time") %>
     </fieldset><br><br>
     <fieldset class="rating_1">
+      <h3><%= f.label :comment %></h3> <%= f.text_area :comment, :cols => 40, :rows => 3 %><br><br>
       <%= f.submit %>
     </fieldset>
     <% end %>
