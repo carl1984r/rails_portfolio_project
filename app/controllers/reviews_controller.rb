@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :require_login
   before_action :init_business
+  before_action :init_username
 
   def new
     @review = Review.new
@@ -27,6 +28,10 @@ class ReviewsController < ApplicationController
 
   def init_business
     @business = Business.find_by(id: params[:business_id])
+  end
+
+  def init_username
+    @username = current_user.username
   end
 
 end
