@@ -43,14 +43,15 @@
          <div>
            <% if @business.reviews.any? %>
              <% @business.reviews.reverse.each do |review| %>
-               <br>
-                 <div>Experience:&nbsp<div class="Stars" style="--rating: <%= review.experience %>;"></div></div>
-               <br>
-                 <div>Location:&nbsp<div class="Stars" style="--rating: <%= review.location %>;"></div></div>
-               <br>
-                 <div>Value:&nbsp<div class="Stars" style="--rating: <%= review.value %>;"></div></div>
-               <br>
-                 <div><%= review.user %>'s review:&nbsp<%= review.comment %></div></div><br><hr>
+             <br>
+               <div>Experience:&nbsp<div class="Stars" style="--rating: <%= review.experience %>;"></div></div>
+             <br>
+               <div>Location:&nbsp<div class="Stars" style="--rating: <%= review.location %>;"></div></div>
+             <br>
+               <div>Value:&nbsp<div class="Stars" style="--rating: <%= review.value %>;"></div></div>
+             <br>
+                 <%= review.user %>'s review:&nbsp<br><hr><br>
+                 <%= review.comment %><br><br><hr>
              <% end %>
            <% else %>
               This biz has not been reviewed
