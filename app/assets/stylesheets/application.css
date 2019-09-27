@@ -368,7 +368,7 @@ a:hover
 }
 
 .test_2 {
-  margin-left: -143px;
+  margin-left: -32px;
 }
 
 .test_3 {
@@ -383,6 +383,14 @@ a:hover
   margin-left: -186px;
 }
 
+.text_alignment {
+  position: absolute;
+  left: 0;
+  top: 40.5%;
+  margin-left: -180px;
+  width: 100%;
+  text-align: center;
+}
 .spacer:after {
   content: "\00a0\00a0\00a0\00a0";
 }
