@@ -224,7 +224,7 @@ a:hover
   font-size: 11px;
   top: 0px;
   left: 50%;
-  margin-left: -3px;
+  margin-left: 2px;
   text-align: left;
   position: absolute;
 
@@ -238,7 +238,7 @@ a:hover
   font-size: 11px;
   top: 0px;
   left: 50%;
-  margin-left: 32px;
+  margin-left: 25px;
   text-align: left;
   position: absolute;
 

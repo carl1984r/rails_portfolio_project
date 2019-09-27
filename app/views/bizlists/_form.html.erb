@@ -1,9 +1,7 @@
-<% if bizlist.errors.any? %>
-  <div class="alert_align3">
-      <% bizlist.errors.full_messages.each do |msg| %>
-        <h2><%= msg %></h2>
-      <% end %>
-      <hr class="hr_color">
+<% if flash[:name_required] %>
+  <div class="alert_align2">
+    <h2><%= flash[:name_required] %></h2>
+  <hr class="hr_color">
   </div>
 <% end %>
 

@@ -31,7 +31,8 @@ class BizlistsController < ApplicationController
       flash[:message] = "Bizlist Successfully Created"
       redirect_to user_bizlists_path(current_user)
     else
-      render :new
+      flash[:name_required] = "Bizlist name required"
+      redirect_to new_user_bizlist_path(current_user)
     end
   end
 
@@ -56,7 +57,8 @@ class BizlistsController < ApplicationController
           redirect_to bizlist_path(@bizlist)
             flash[:biz_updated] = "Bizlist updated"
         else
-          render :edit
+          flash[:name_required] = "Bizlist name required"
+          redirect_to edit_user_bizlist_path(current_user, @bizlist)
         end
     end
  end
