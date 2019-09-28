@@ -391,6 +391,10 @@ a:hover
   width: 100%;
   text-align: center;
 }
+
+.text_alignment_1 {
+  margin-left: -275px;
+}
 .spacer:after {
   content: "\00a0\00a0\00a0\00a0";
 }
