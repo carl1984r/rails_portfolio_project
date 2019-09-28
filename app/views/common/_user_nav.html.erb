@@ -2,26 +2,18 @@
 
 <html>
   <head>
-
       <title>bizrev</title>
       <%= stylesheet_link_tag 'application' %>
-
   </head>
 
   <body>
-
     <nav role="navigation">
-
       <div id="menuToggle">
-
         <input type="checkbox" />
-
           <span></span>
           <span></span>
           <span></span>
-
         <ul id="menu">
-
           <% if logged_in? %>
             <li><%= link_to "Biz Index", user_bizlists_path(current_user), :method => "get" %></li>
             <li><%= link_to "Create Bizlist", new_user_bizlist_path(current_user), :method => "get"%></li>
@@ -49,11 +41,7 @@
       <hr class="hr_color">
       </div>
     <% end %>
-
-    <span class="rel_nav_right">Welcome <%= @username %><hr class="hr_color"></span>
-
-    <%= yield %>
-
+      <span class="rel_nav_right">Welcome <%= @username %><hr class="hr_color"></span>
+      <%= yield %>
   </body>
-
 </html>
