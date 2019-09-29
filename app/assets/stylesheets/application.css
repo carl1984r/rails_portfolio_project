@@ -16,39 +16,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
 
-#vertbar_1 {
-  border-left:2px solid #0000FF;
-  height: 1.0em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-}
-
-#vertbar_2 {
-  border-left:3px solid #0000FF;
-  height: 1.3em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-}
-
-#vertbar_3 {
-  border-left:4px solid #0000FF;
-  height: 1.8em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-}
-
-#vertbar_4
-{
-  border-left:2px solid #0000FF;
-  height: 30em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-  position: absolute;
-  left: 50%;
-  top: 15%;
-}
-
-
 body
 {
   margin: 0;
@@ -185,17 +152,6 @@ a:hover
 #menuToggle input:checked ~ ul
 {
   transform: none;
-}
-
-#static_text {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 4.5em;
 }
 
 #vert
