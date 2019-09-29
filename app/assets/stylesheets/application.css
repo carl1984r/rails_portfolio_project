@@ -162,39 +162,11 @@ a:hover
  margin-right: 1.0em;
 }
 
-.alert_align1 {
-  font-size: 11px;
-  top: 0px;
-  left: 50%;
-  margin-left: 36px;
-  text-align: left;
-  position: absolute;
-
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari + Chrome */
-  -o-animation: fadein 2s; /* Opera */
-}
-
 .alert_align2 {
   font-size: 11px;
   top: 0px;
   left: 50%;
   margin-left: 2px;
-  text-align: left;
-  position: absolute;
-
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari + Chrome */
-  -o-animation: fadein 2s; /* Opera */
-}
-
-.alert_align3 {
-  font-size: 11px;
-  top: 0px;
-  left: 50%;
-  margin-left: 25px;
   text-align: left;
   position: absolute;
 
@@ -214,20 +186,6 @@ a:hover
   -o-animation: fadein 2s; /* Opera */
 }
 
-.alert_align5 {
-  font-size: 11px;
-  top: 0px;
-  left: 50%;
-  margin-left: 10px;
-  text-align: left;
-  position: absolute;
-
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari + Chrome */
-  -o-animation: fadein 2s; /* Opera */
-}
-
 .review_error_align {
   margin-left: 22px;
 }
@@ -238,13 +196,6 @@ a:hover
   margin-left: 113px;
   text-align: left;
   position: absolute;
-}
-
-.biz_align_1 {
-  top: -18px;
-  left: 0%;
-  text-align: left;
-  position: relative;
 }
 
 .row {
@@ -319,24 +270,8 @@ a:hover
   font-weight: bold;
 }
 
-.test_1 {
-  margin-left: -237px;
-}
-
 .test_2 {
   margin-left: -32px;
-}
-
-.test_3 {
-  margin-left: -207px;
-}
-
-.test_4 {
-  margin-left: -212px;
-}
-
-.test_5 {
-  margin-left: -186px;
 }
 
 .text_alignment {
@@ -355,11 +290,6 @@ a:hover
 .text_alignment_2 {
   margin-left: -275px;
   top: 44.2%;
-}
-
-
-.spacer44.2fter {
-  content: "\00a0\00a0\00a0\00a0";
 }
 
 .add-button {
