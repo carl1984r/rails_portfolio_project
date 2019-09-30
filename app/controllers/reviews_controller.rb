@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
     if !!params[:review] && !!params[:review][:experience] && !!params[:review][:location] && !!params[:review][:value]
       @review = Review.new(review_params)
       @review.user = @username
+      @review.average = @review.review_average(@review.experience, @review.location, @review.value)
       @business.reviews << @review
       flash[:review_created] = "Review successfully created"
       redirect_to business_path(@business)

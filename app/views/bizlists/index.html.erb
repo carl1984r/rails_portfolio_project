@@ -61,13 +61,18 @@
       </div>
     <% end %>
       <% @businesses.reverse.each do |business| %>
-            <div><h2><%= link_to business.name, business_path(business) %></h2><h5>average rating:</h5></div><hr><br>
+            <div><h2><%= link_to business.name, business_path(business) %></h2>
+              <% if business.reviews.empty? %>
+                <h5>no reviews</h5><hr><br>
+              <% else%>
+                <h5>average rating:&nbsp <%= business.overall_rating %></h5></div><hr><br>
+              <% end %>
             <div>
               <% if !business.description.empty? %>
                  <%= business.description %><br><br>
               <% end %>
             </div>
-            <div><%= business.address %></div>
+            <div>Address:&nbsp<%= business.address %></div>
             <br><hr>
       <% end %>
     <% end %>

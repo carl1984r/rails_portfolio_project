@@ -21,7 +21,7 @@
        <div>
          <h2><%= @business.name %></h2><hr>
          <p><%= @business.description %></p>
-         <p><%= @business.address %></p><hr>
+         <p>Address:&nbsp<%= @business.address %></p><hr>
          <p>Total Reviews: <%= @business.reviews.count %></p>
        </div>
      </div>
@@ -49,7 +49,7 @@
                <br>
                  <div>Value:&nbsp<div class="Stars" style="--rating: <%= review.value %>;"></div></div>
                <br>
-                 <div>Overall:&nbsp<div class="Stars" style="--rating: <%= review.review_average(review.experience, review.location, review.value) %>;"></div></div><br><hr><br>
+                 <div>Overall:&nbsp<div class="Stars" style="--rating: <%= review.average %>;"></div></div><br><hr><br>
                    <% if !review.comment.empty? %>
                       <%= review.comment %><br><br><hr>
                    <% else %>
