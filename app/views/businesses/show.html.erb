@@ -42,7 +42,7 @@
          <div>
            <% if @business.reviews.any? %>
              <% @business.reviews.reverse.each do |review| %>
-               <h2><%= review.user %>'s review&nbsp</h2><hr><br>
+               <h2><%= review.user %>'s review</h2><h5><%=time_ago_in_words(review.created_at) %> ago</h5><hr><br>
                  <div>Experience:&nbsp<div class="Stars" style="--rating: <%= review.experience %>;"></div></div>
                <br>
                  <div>Location:&nbsp<div class="Stars" style="--rating: <%= review.location %>;"></div></div>

@@ -27,7 +27,12 @@
     </div>
   <% end %>
     <% @bizlists.reverse.each do |bizlist| %>
-          <br><div>Name:&nbsp<%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></div><br><div>Description:&nbsp<%= bizlist.description %></div><br><hr>
+          <div><h2><%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></h2></div>
+          <div>
+               <%= "bizlist.description<br><br>".html_safe unless bizlist.description.empty? %>
+
+
+          </div><hr>
     <% end %>
   <% end %>
   </div>
