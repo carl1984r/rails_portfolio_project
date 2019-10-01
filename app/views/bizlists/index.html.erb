@@ -30,7 +30,7 @@
           <div><h2><%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></h2></div>
           <div>
             <% if !bizlist.description.empty? %>
-               <br><%= bizlist.description %><br><br>
+               <br>Description:&nbsp<%= bizlist.description %><br><br>
             <% end %>
           </div><hr>
     <% end %>
@@ -65,15 +65,15 @@
               <% if business.reviews.empty? %>
                 <h5>no reviews</h5><hr><br>
               <% else%>
-                <h5>average rating:&nbsp <%= business.overall_rating %></h5></div><hr><br>
+                <div>average rating:&nbsp<div class="Stars" style="--rating: <%= business.overall_rating %>;"></div></div><br><hr><br>
               <% end %>
             <div>
               <% if !business.description.empty? %>
-                 <%= business.description %><br><br>
+                 Description:&nbsp<%= business.description %><br><br>
               <% end %>
             </div>
             <div>Address:&nbsp<%= business.address %></div>
-            <br><hr>
+            <br><hr class="hr_color">
       <% end %>
     <% end %>
     </div>

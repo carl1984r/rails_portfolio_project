@@ -51,9 +51,9 @@
                <br>
                  <div>Overall:&nbsp<div class="Stars" style="--rating: <%= review.average %>;"></div></div><br><hr><br>
                    <% if !review.comment.empty? %>
-                      <%= review.comment %><br><br><hr>
+                      <%= review.comment %><br><br><hr class="hr_color">
                    <% else %>
-                      No comment for this review.<br><br><hr>
+                      No comment for this review.<br><br><hr class="hr_color">
                    <% end %>
              <% end %>
            <% else %>
