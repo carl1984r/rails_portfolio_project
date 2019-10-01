@@ -61,9 +61,9 @@
       </div>
     <% end %>
       <% @businesses.reverse.each do |business| %>
-            <div><h2><%= link_to business.name, business_path(business) %></h2>
+            <div><h2><%= link_to business.name, business_path(business) %></h2></div><hr><br>
               <% if business.reviews.empty? %>
-                <h5>no reviews</h5><hr><br>
+                <div>no reviews</div><br><hr><br>
               <% else%>
                 <div>average rating:&nbsp<div class="Stars" style="--rating: <%= business.overall_rating %>;"></div></div><br><hr><br>
               <% end %>
