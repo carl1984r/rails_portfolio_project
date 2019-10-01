@@ -30,9 +30,9 @@
           <div><h2><%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></h2></div>
           <div>
             <% if !bizlist.description.empty? %>
-               <br>Description:&nbsp<%= bizlist.description %><br><br>
+               <hr><br>Description:&nbsp<%= bizlist.description %><br><br>
             <% end %>
-          </div><hr>
+          </div><hr class="hr_color">
     <% end %>
   <% end %>
   </div>

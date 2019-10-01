@@ -20,8 +20,10 @@
          <% end %>
        <div>
          <h2><%= @business.name %></h2><hr>
-         <p><%= @business.description %></p>
-         <p>Address:&nbsp<%= @business.address %></p><hr>
+         <% if !@business.description.empty? %>
+           <p>Description:&nbsp<%= @business.description %></p>
+         <% end %>
+         <p>Address:&nbsp<%= @business.address %></p><hr class="hr_color">
          <p>Total Reviews: <%= @business.reviews.count %></p>
        </div>
      </div>
