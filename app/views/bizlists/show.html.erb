@@ -18,10 +18,14 @@
              <hr class="hr_color">
            </div>
          <% end %>
-       <div>
-         <h2><%= @bizlist.name %></h2><hr>
-         <p><%= @bizlist.description %></p>
-       </div>
+           <div>
+             <h2><%= @bizlist.name %></h2>
+           </div><hr><br>
+           <div>
+             <% if !@bizlist.description.empty? %>
+               Description:&nbsp<%= @bizlist.description %>
+             <% end %>
+           </div>
      </div>
 
      <div class="col mainbar">
@@ -42,7 +46,11 @@
               <br>No businesses have been added to this bizlist.
            <% else %>
                <% @bizlist.businesses.reverse.each do |business| %>
-                     <br><div>Name:&nbsp<%= link_to business.name, business_path(business) %></div><br><div>Description:&nbsp<%= business.description %></div><br><div>Address:&nbsp<%= business.address %></div><br><hr>
+                     <div><h2><%= link_to business.name, business_path(business) %></h2></div><hr><br>
+                     <% if !business.description.empty? %>
+                       <div>Description:&nbsp<%= business.description %></div><br>
+                     <% end %>
+                     <div>Address:&nbsp<%= business.address %></div><br><hr class="hr_color">
                <% end %>
            <% end %>
          </div>
