@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_151947) do
+ActiveRecord::Schema.define(version: 2019_10_04_054021) do
 
   create_table "bizlists", force: :cascade do |t|
     t.string "name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_09_30_151947) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "email"
+    t.string "uid"
   end
 
 end
