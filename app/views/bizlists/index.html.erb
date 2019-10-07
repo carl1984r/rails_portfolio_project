@@ -48,6 +48,12 @@
         Select Add a Business from the menu to add a new business.
       </div>
     <% else %>
+    <div id="search_align">
+      <%= form_tag("/search", method: "get") do %>
+      <%= text_field_tag :query, "Search by Business" %>
+      <%= submit_tag "Search" %><hr>
+      <% end %>
+    </div>
     <div class="flex_header">
       Biz Index
     </div>

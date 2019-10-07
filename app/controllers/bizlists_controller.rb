@@ -63,6 +63,12 @@ class BizlistsController < ApplicationController
     end
  end
 
+ def search
+    @bizlists = current_user.bizlists
+    @businesses = Business.search(params[:query])
+    render :index
+ end
+
  def destroy
     if @bizlist
       @bizlist.destroy

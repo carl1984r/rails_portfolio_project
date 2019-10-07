@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   has_many :bizlists
 
-  validates :username, presence: { message: "cannot be empty" }
-  validates :email, presence: true, uniqueness: true
+  validates_length_of :username, minimum: 4, maximum: 16
+  validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
 end
