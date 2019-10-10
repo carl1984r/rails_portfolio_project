@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
-  get '/search', to: 'bizlists#search'
+  get '/biz_search', to: 'bizlists#search'
+  get '/biz_filter_within_last_24_hours', to: 'bizlists#last_day'
   get '*path', to: 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

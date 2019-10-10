@@ -8,6 +8,8 @@ class Business < ApplicationRecord
 
   scope :search, -> (query) { where("name LIKE ?", "%" + query + "%") }
 
+  scope :last_day, -> { joins(:reviews).where('reviews.created_at >= ?', 1.day.ago).uniq }
+
   def overall_rating
       ((reviews.sum(&:average)/reviews.count)*10).ceil/10.0 unless reviews.empty?
   end

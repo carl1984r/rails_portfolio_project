@@ -44,16 +44,28 @@
       </div>
         <hr class="hr_style">
         <br>
+        <% if flash[:no_search_results] %>
+          <div class="alert_align4">
+            <h2><%= flash[:no_search_results] %></h2>
+            <br>
+            <hr class="hr_color"><br>
+          </div>
+        <% end %>
       <div>
         Select Add a Business from the menu to add a new business.
       </div>
     <% else %>
-    <div id="search_align">
-      <%= form_tag("/search", method: "get") do %>
+    <div class="search_align">
+      <%= form_tag("/biz_search", method: "get") do %>
       <%= text_field_tag :query, "Search by Business" %>
-      <%= submit_tag "Search" %><hr>
+      <%= submit_tag "Search" %>&nbsp&nbsp|&nbsp&nbsp<hr>
       <% end %>
     </div>
+
+    <div class="search_align search_align_1">
+      <%= button_to "Biz reviewed within last 24 hours", biz_filter_within_last_24_hours_path, method: :get %><hr>
+    </div>
+
     <div class="flex_header">
       Biz Index
     </div>

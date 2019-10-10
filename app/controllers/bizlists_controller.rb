@@ -66,7 +66,19 @@ class BizlistsController < ApplicationController
  def search
     @bizlists = current_user.bizlists
     @businesses = Business.search(params[:query])
+    if @businesses.empty?
+      flash[:no_search_results] = "No business found"
+    end
     render :index
+ end
+
+ def last_day
+   @bizlists = current_user.bizlists
+   @businesses = Business.last_day
+   if @businesses.empty?
+     flash[:no_search_results] = "No business found"
+   end
+   render :index
  end
 
  def destroy
