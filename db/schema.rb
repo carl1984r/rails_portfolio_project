@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_101636) do
+ActiveRecord::Schema.define(version: 2019_10_12_060203) do
 
   create_table "bizlists", force: :cascade do |t|
     t.string "name"
@@ -53,11 +53,6 @@ ActiveRecord::Schema.define(version: 2019_10_06_101636) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "email"
-    t.string "uid"
-    t.string "provider"
-    t.string "remember_token"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
 end
