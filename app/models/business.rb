@@ -13,4 +13,10 @@ class Business < ApplicationRecord
   def overall_rating
       ((reviews.sum(&:average)/reviews.count)*10).ceil/10.0 unless reviews.empty?
   end
+
+  def find_join(arg)
+    reviews.find_review(arg.id)[0].business_reviews[0]
+  end
+
+
 end

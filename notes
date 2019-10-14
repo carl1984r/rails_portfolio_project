@@ -3,3 +3,6 @@
 options_for_select([["within 24 hours", "24.hours.ago], ["within 48 hours", "48.hours.ago"], ["All Ratings", ""]])
 
 Business.joins(:reviews).where('reviews.created_at >= ?', 1.day.ago)
+
+@business.reviews.find_review(current_user.id)[0
+].business_reviews[0]

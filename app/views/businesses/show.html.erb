@@ -11,9 +11,9 @@
        </div>
          <hr class="hr_style">
          <br>
-         <% if flash[:business_updated] %>
+         <% if flash[:business_updated] || flash[:business_marked_as_favorite] || flash[:business_unmarked_as_favorite] || flash[:business_needs_review] %>
            <div class="alert_align4">
-             <h2><%= flash[:business_updated] %></h2>
+             <h2><%= flash[:business_updated] || flash[:business_marked_as_favorite] || flash[:business_unmarked_as_favorite] || flash[:business_needs_review]%></h2>
              <br>
              <hr class="hr_color">
            </div>
