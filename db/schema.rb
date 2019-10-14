@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_060203) do
+ActiveRecord::Schema.define(version: 2019_10_14_014633) do
 
   create_table "bizlists", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_10_12_060203) do
     t.integer "review_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "fav", default: false
   end
 
   create_table "businesses", force: :cascade do |t|
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_10_12_060203) do
     t.string "comment"
     t.string "user"
     t.float "average"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

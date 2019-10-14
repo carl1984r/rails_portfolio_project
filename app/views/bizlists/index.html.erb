@@ -27,7 +27,7 @@
     </div>
   <% end %>
     <% @bizlists.reverse.each do |bizlist| %>
-          <div><h2><%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></h2></div>
+          <h2><%= link_to bizlist.name, user_bizlist_path(current_user, bizlist) %></h2>
           <div>
             <% if !bizlist.description.empty? %>
                <hr><br>Description:&nbsp<%= bizlist.description %><br><br>
@@ -79,7 +79,8 @@
       </div>
     <% end %>
       <% @businesses.reverse.each do |business| %>
-            <div><h2><%= link_to business.name, business_path(business) %></h2></div><hr><br>
+            <h2><%= link_to business.name, business_path(business) %></h2>
+            <div>last reviewed <%= time_ago_in_words(business.reviews.search.created_at) %> ago</div><br><hr><br>
               <% if business.reviews.empty? %>
                 <div>no reviews</div><br><hr><br>
               <% else%>

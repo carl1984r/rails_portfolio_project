@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :require_login
   before_action :init_business
-  before_action :init_username
 
   def new
     @review = Review.new
@@ -11,7 +10,8 @@ class ReviewsController < ApplicationController
   def create
     if !!params[:review] && !!params[:review][:experience] && !!params[:review][:location] && !!params[:review][:value]
       @review = Review.new(review_params)
-      @review.user = @username
+      @review.user = current_user.username
+      @review.user_id = current_user.id
       @review.average = @review.review_average(@review.experience, @review.location, @review.value)
       @business.reviews << @review
       flash[:review_created] = "Review successfully created"
@@ -30,10 +30,6 @@ class ReviewsController < ApplicationController
 
   def init_business
     @business = Business.find_by(id: params[:business_id])
-  end
-
-  def init_username
-    @username = current_user.username
   end
 
 end
