@@ -29,7 +29,9 @@ Specs:
     -  Review has_many :businesses, through: :business_reviews
 
 
-- [ ] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
+- [x] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
+
+    - BusinessReviews.fav
 
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 
@@ -43,6 +45,10 @@ Specs:
     Business
       - validates :name, presence: true
       - validates :address, presence: true, uniqueness: true
+
+    Review
+      - Validates presence of experience, location and value. AR
+        validation was not used, validations within the controller were used to simplify error messages and styling.  
 
 - [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 
@@ -91,7 +97,7 @@ Specs:
     - example -> /users/new
 
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate

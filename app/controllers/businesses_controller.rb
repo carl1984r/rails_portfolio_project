@@ -34,11 +34,11 @@ class BusinessesController < ApplicationController
       redirect_to user_bizlists_path(current_user)
     end
   end
-
+#
   def fav
     @business = Business.find_by(id: params[:format])
-    if !!@business.find_join(@user)
-      var = @business.find_join(@user)
+    if !@business.find_join(@user).empty?
+      var = @business.find_join(@user)[0].business_reviews[0]
       var.fav = !var.fav
       var.save
       redirect_to business_path(@business)

@@ -15,8 +15,7 @@ class Business < ApplicationRecord
   end
 
   def find_join(arg)
-    reviews.find_review(arg.id)[0].business_reviews[0]
+    reviews.find_review(arg.id)
   end
-
 
 end
