@@ -37,16 +37,14 @@ class BusinessesController < ApplicationController
 #
   def fav
     @business = Business.find_by(id: params[:format])
-    if !@business.find_join(@user).empty?
-      var = @business.find_join(@user)[0].business_reviews[0]
-      var.fav = !var.fav
-      var.save
-      redirect_to business_path(@business)
-      if var.fav
-        flash[:business_marked_as_favorite] = "Business marked as fav"
-      else
-        flash[:business_unmarked_as_favorite] = "Business unmarked as fav"
-      end
+    if !@business.review_find(@user).empty?
+       @business.find_and_update_join(@user)
+       redirect_to business_path(@business)
+         if @business.find_join_attribute(@user)
+          flash[:business_marked_as_favorite] = "Business marked as fav"
+         else
+          flash[:business_unmarked_as_favorite] = "Business unmarked as fav"
+         end
     else
       redirect_to business_path(@business)
       flash[:business_needs_review] = "Must review business before marking as fav"

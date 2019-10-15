@@ -14,8 +14,18 @@ class Business < ApplicationRecord
       ((reviews.sum(&:average)/reviews.count)*10).ceil/10.0 unless reviews.empty?
   end
 
-  def find_join(arg)
+  def review_find(arg)
     reviews.find_review(arg.id)
+  end
+
+  def find_and_update_join(arg)
+    join_model = review_find(arg)[0].assign
+    join_model.fav = !join_model.fav
+    join_model.save    
+  end
+
+  def find_join_attribute(arg)
+    review_find(arg)[0].assign.fav
   end
 
 end

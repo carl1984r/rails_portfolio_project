@@ -10,4 +10,8 @@ class Review < ApplicationRecord
     (((var1 + var2 + var3)/3.to_f)*10).ceil/10.0
   end
 
+  def assign
+    business_reviews[0]
+  end
+
 end
