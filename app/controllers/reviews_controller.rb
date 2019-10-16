@@ -10,10 +10,7 @@ class ReviewsController < ApplicationController
   def create
     if !!params[:review] && !!params[:review][:experience] && !!params[:review][:location] && !!params[:review][:value]
       @review = Review.new(review_params)
-      @review.user = current_user.username
-      @review.user_id = current_user.id
-      @review.average = @review.review_average(@review.experience, @review.location, @review.value)
-      @business.reviews << @review
+      @review.assemble_review(current_user, @business)
       flash[:review_created] = "Review successfully created"
       redirect_to business_path(@business)
     else

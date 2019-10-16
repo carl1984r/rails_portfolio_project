@@ -10,8 +10,16 @@ class Review < ApplicationRecord
     (((var1 + var2 + var3)/3.to_f)*10).ceil/10.0
   end
 
+  def assemble_review(arg, arg_2)
+    self.user = arg.username
+    self.user_id = arg.id
+    self.average = self.review_average(self.experience, self.location, self.value)
+    arg_2.reviews << self
+  end
+
   def assign
     business_reviews[0]
   end
+
 
 end
