@@ -3,5 +3,5 @@
   <div><%= link_to "add", user_bizlist_add_path(current_user, @bizlist), :method => "get", class: "sub-button tl" %></div>
   <div><%= link_to "edit list", edit_user_bizlist_path(current_user, @bizlist), :method => "get", class: "sub-button bl" %></div>
   <div><%= link_to "remove biz", user_bizlist_remove_path(current_user, @bizlist), :method => "get", class: "sub-button br" %></div>
-  <div><%= link_to "delete list", user_bizlist_path(current_user), method: :delete, class: "sub-button tr" %></div>
+  <div><%= link_to "delete list", remove_bizlist_path(:bizlist => @bizlist), class: "sub-button tr" %></div>
 </div>

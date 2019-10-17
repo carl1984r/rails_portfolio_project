@@ -11,4 +11,14 @@ class Bizlist < ApplicationRecord
   def remove_from
   end
 
+  def self.verify_presence(bizlist, param)
+    !!Business.find_by(id: param) && !bizlist.businesses.find_by(id: param)
+  end
+
+  def remove_biz(bizlist, param)
+    remove = bizlist.businesses.find_by(id: param)
+    remove.bizlist_id = nil
+    remove.save
+  end
+
 end

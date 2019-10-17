@@ -37,29 +37,26 @@ class BizlistsController < ApplicationController
   end
 
   def update
-    if !!Business.find_by(id: params[:bizlist]['add_to']) && !@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
-      @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
-      redirect_to bizlist_path(@bizlist)
-      flash[:biz_added] = "Biz successfully added to this bizlist"
-    elsif
-      !!@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
-      redirect_to bizlist_path(@bizlist)
-      flash[:biz_present] = "Biz already added to this bizlist"
+    if Bizlist.verify_presence(@bizlist, params[:bizlist]['add_to'])
+         @bizlist.businesses << Business.find_by(id: params[:bizlist]['add_to'])
+         redirect_to bizlist_path(@bizlist)
+         flash[:biz_added] = "Biz successfully added to this bizlist"
+    elsif !!@bizlist.businesses.find_by(id: params[:bizlist]['add_to'])
+         redirect_to bizlist_path(@bizlist)
+         flash[:biz_present] = "Biz already added to this bizlist"
     elsif !!params[:bizlist]['remove_from']
-      remove = @bizlist.businesses.find_by(id: params[:bizlist]['remove_from'])
-      remove.bizlist_id = nil
-      remove.save
-      redirect_to bizlist_path(@bizlist)
-      flash[:biz_removed] = "Biz removed from this bizlist"
+         @bizlist.remove_biz(@bizlist, params[:bizlist]['remove_from'])
+         redirect_to bizlist_path(@bizlist)
+         flash[:biz_removed] = "Biz removed from this bizlist"
     else
-      @bizlist.update(bizlist_params)
-        if @bizlist.save
-          redirect_to bizlist_path(@bizlist)
-            flash[:biz_updated] = "Bizlist updated"
-        else
-          flash[:name_required] = "Bizlist name required"
-          redirect_to edit_user_bizlist_path(current_user, @bizlist)
-        end
+         @bizlist.update(bizlist_params)
+           if @bizlist.save
+             redirect_to bizlist_path(@bizlist)
+             flash[:biz_updated] = "Bizlist updated"
+           else
+             flash[:name_required] = "Bizlist name required"
+             redirect_to edit_user_bizlist_path(current_user, @bizlist)
+           end
     end
  end
 
@@ -81,8 +78,9 @@ class BizlistsController < ApplicationController
    render :index
  end
 
- def destroy
-    if @bizlist
+ def list_destroy
+   @bizlist = Bizlist.find_by(id: params[:bizlist])
+    if !!@bizlist
       @bizlist.destroy
       redirect_to user_bizlists_path(current_user)
       flash[:biz_delete] = "Bizlist deleted"
