@@ -1,7 +1,8 @@
 class Bizlist < ApplicationRecord
 
   belongs_to :user
-  has_many :businesses
+  has_many :bizlist_businesses
+  has_many :businesses, through: :bizlist_businesses
 
   validates :name, presence: true
 

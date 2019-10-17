@@ -1,5 +1,6 @@
 class Business < ApplicationRecord
-  belongs_to :bizlist, optional: true
+  has_many :bizlist_businesses
+  has_many :bizlists, through: :bizlist_businesses
   has_many :business_reviews
   has_many :reviews, through: :business_reviews
 
@@ -21,7 +22,7 @@ class Business < ApplicationRecord
   def find_and_update_join(arg)
     join_model = review_find(arg)[0].assign
     join_model.fav = !join_model.fav
-    join_model.save    
+    join_model.save
   end
 
   def find_join_attribute(arg)
