@@ -44,9 +44,9 @@
       </div>
         <hr class="hr_style">
         <br>
-        <% if flash[:no_search_results] %>
+        <% if flash[:no_search_results] || flash[:logged_in_with_google] %>
           <div class="alert_align4">
-            <h2><%= flash[:no_search_results] %></h2>
+            <h2><%= flash[:no_search_results] || flash[:logged_in_with_google] %></h2>
             <br>
             <hr class="hr_color"><br>
           </div>
@@ -71,9 +71,9 @@
     </div>
     <hr class="hr_style">
       <br>
-    <% if flash[:business] %>
+    <% if flash[:business] || flash[:logged_in_with_google] %>
       <div class="alert_align4">
-        <h2><%= flash[:business] %></h2>
+        <h2><%= flash[:business] || flash[:logged_in_with_google] %></h2>
         <br>
         <hr class="hr_color">
       </div>

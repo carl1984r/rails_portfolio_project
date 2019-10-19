@@ -38,6 +38,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_bizlists_path(@user)
+      flash[:logged_in_with_google] = "Signed in with Google"
     else
       render :new
     end
