@@ -5,6 +5,10 @@
   <%= form_for :session, url: login_path do |f| %>
     <h4><%= f.label :username %>:</h4> <%= f.text_field :username %><br>
     <h4><%= f.label :password %>:</h4> <%= f.password_field :password %><br><br>
-    <%= f.submit "Login" %>
+    <%= f.submit "Login" %><br><br>
+    <div class="strike">
+      <span>or</span>
+    </div><br>
+  <%= link_to "Login with Google", '/auth/google' %>
   <% end %>
 </div>

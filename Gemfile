@@ -24,7 +24,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
- gem 'bcrypt'
+gem 'bcrypt'
+
+gem 'omniauth'
+
+gem 'omniauth-google-oauth2'
+
+gem 'dotenv-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,7 +50,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 
   gem 'pry-rails'
-  
+
 end
 
 group :test do

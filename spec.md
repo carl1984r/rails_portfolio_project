@@ -19,9 +19,10 @@ Specs:
     -  BusinessReview belongs_to :review
     -  Business belongs_to bizlist
 
-- [ ] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients)
+- [x] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients)
 
     -  Business has_many :reviews, through: :business_reviews
+    -  Bizlist has_many :businesses, through: :bizlist_businesses
 
 - [x] Include at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe has_many Items through Ingredients, Item has_many Recipes through Ingredients)
 
@@ -80,7 +81,7 @@ Specs:
     - logout_path within the link_to sends application to Sessions#destroy
     - session is cleared, logging out user and redirecting to the home page
 
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
 
 - [x] Include nested resource show or index (URL e.g. users/2/recipes)
 
