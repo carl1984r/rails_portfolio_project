@@ -60,6 +60,17 @@ class BizlistsController < ApplicationController
     end
  end
 
+ def favs
+   @bizlists = current_user.bizlists
+   @businesses = Business.user_favs(current_user.id)
+   if @businesses.empty?
+     flash[:no_fav_search_results] = "No biz marked as fav"
+   else
+     flash[:fav_biz] = "Biz marked as fav"
+   end
+   render :index
+ end
+
  def search
     @bizlists = current_user.bizlists
     @businesses = Business.search(params[:query])
@@ -81,7 +92,7 @@ class BizlistsController < ApplicationController
  def list_destroy
    @bizlist = Bizlist.find_by(id: params[:bizlist])
     if !!@bizlist
-      @bizlist.destroy
+      @bizlist.delete_bizlist(@bizlist)
       redirect_to user_bizlists_path(current_user)
       flash[:biz_delete] = "Bizlist deleted"
     else

@@ -22,4 +22,9 @@ class Bizlist < ApplicationRecord
     remove.save
   end
 
+  def delete_bizlist(bizlist)
+    bizlist.bizlist_businesses.each {|x| x.delete} unless bizlist.bizlist_businesses.empty?
+    bizlist.destroy
+  end
+
 end

@@ -11,6 +11,8 @@ class Business < ApplicationRecord
 
   scope :last_day, -> { joins(:reviews).where('reviews.created_at >= ?', 1.day.ago).uniq }
 
+  scope :user_favs, -> (query) { joins(:business_reviews).where('business_reviews.fav == ?', true).joins(:reviews).where('reviews.user_id == ?', query) }
+
   def overall_rating
       ((reviews.sum(&:average)/reviews.count)*10).ceil/10.0 unless reviews.empty?
   end

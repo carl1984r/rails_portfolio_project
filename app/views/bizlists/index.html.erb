@@ -10,6 +10,13 @@
     </div>
       <hr class="hr_style">
       <br>
+      <% if flash[:biz_delete] %>
+        <div class="alert_align4">
+          <h2><%= flash[:biz_delete] %></h2>
+          <br>
+          <hr class="hr_color"><br>
+        </div>
+      <% end %>
     <div>
       Select Create Bizlist from the menu to make a new list for biz monitoring / organizing.
     </div>
@@ -19,7 +26,7 @@
   </div>
   <hr class="hr_style">
     <br>
-  <% if flash[:message] || flash[:biz_delete] || flash[:warning]%>
+  <% if flash[:message] || flash[:biz_delete] || flash[:warning] %>
     <div class="alert_align4">
       <h2><%= flash[:message] || flash[:biz_delete] || flash[:warning] %></h2>
       <br>
@@ -44,9 +51,9 @@
       </div>
         <hr class="hr_style">
         <br>
-        <% if flash[:no_search_results] || flash[:logged_in_with_google] %>
+        <% if flash[:no_search_results] || flash[:logged_in_with_google] || flash[:no_fav_search_results] %>
           <div class="alert_align4">
-            <h2><%= flash[:no_search_results] || flash[:logged_in_with_google] %></h2>
+            <h2><%= flash[:no_search_results] || flash[:logged_in_with_google] || flash[:no_fav_search_results] %></h2>
             <br>
             <hr class="hr_color"><br>
           </div>
@@ -71,9 +78,9 @@
     </div>
     <hr class="hr_style">
       <br>
-    <% if flash[:business] || flash[:logged_in_with_google] %>
+    <% if flash[:business] || flash[:logged_in_with_google] || flash[:fav_biz] %>
       <div class="alert_align4">
-        <h2><%= flash[:business] || flash[:logged_in_with_google] %></h2>
+        <h2><%= flash[:business] || flash[:logged_in_with_google] || flash[:fav_biz] %></h2>
         <br>
         <hr class="hr_color">
       </div>
