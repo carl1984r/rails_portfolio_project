@@ -17,9 +17,8 @@ class Bizlist < ApplicationRecord
   end
 
   def remove_biz(bizlist, param)
-    remove = bizlist.businesses.find_by(id: param)
-    remove.bizlist_id = nil
-    remove.save
+    join = bizlist.bizlist_businesses.find_by(business_id: param)
+    join.delete
   end
 
   def delete_bizlist(bizlist)
