@@ -1,28 +1,22 @@
-# Project Title
+# Bizrev
 
-Project description.
+This application allows users to create, organize, monitor and review businesses.  This is a portfolio project per Flatiron School - Full Stack Web Development
 
 ## Getting started
 
-Project setup.
+To get started, clone the repo - install the required gems:
 
 ```
-$ commands
+$ bundle install
 ```
 
-Additional setup.
+Run app via starting a new server
 
 ```
-$ commands
+$ rails s
 ```
 
-Additional setup.
-
-```
-$ commands
-```
-
-Watch this video to learn more. [link text](url).
+Watch this video to learn more about app utilization. [link text](url).
 
 View the blog about producing this app. [link text](url).
 
