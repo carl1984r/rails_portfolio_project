@@ -8,16 +8,19 @@ Specs:
 - [x] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes)
 
     -  User has_many :bizlists
-    -  Bizlist has_many :businesses
+    -  User has_many :reviews
+    -  Bizlist has_many :bizlist_businesses
     -  Business has_many :business_reviews
+    -  Business has_many :bizlist_businesses
     -  Review has_many :business_reviews  
 
 - [x] Include at least one belongs_to relationship (x belongs_to y; e.g. Post belongs_to User)
 
     -  Bizlist belongs_to :user
+    -  BizlistBusiness belongs_to :bizlist
+    -  BizlistBusiness belongs_to :business
     -  BusinessReview belongs_to :business
     -  BusinessReview belongs_to :review
-    -  Business belongs_to bizlist
 
 - [x] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients)
 
@@ -32,7 +35,8 @@ Specs:
 
 - [x] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
 
-    - BusinessReviews.fav
+    - BusinessReviews contains 1 attribute 'fav' which can be updated by the
+      user to show relationship with associated business and its reviews.  
 
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 
@@ -54,6 +58,7 @@ Specs:
 - [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 
     - Business.search(params)  URL: /biz_search
+    - Business.user_favs(args) URL: /biz_favs
     - Business.last_day  URL: /biz_filter_within_last_24_hours
 
 - [x] Include signup (how e.g. Devise)
@@ -81,7 +86,14 @@ Specs:
     - logout_path within the link_to sends application to Sessions#destroy
     - session is cleared, logging out user and redirecting to the home page
 
-- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth
+
+    - Utilizes Google OAuth
+    - Signup + login views both contain links to sign in via Google
+    - Clicking a link follows route to Google sign in page
+    - Successful sign-in sends user to google_login
+    - Auth hash provides info to either find or create user, establish session and
+      redirect to index
 
 - [x] Include nested resource show or index (URL e.g. users/2/recipes)
 
