@@ -1,6 +1,6 @@
 # Bizrev
 
-This application allows users to create, organize, monitor and review businesses.  This is a portfolio project per Flatiron School - Full Stack Web Development
+This application allows users to create, organize, monitor and review businesses.  This is a portfolio project per Flatiron School: Full Stack Web Development
 
 ## Getting started
 
