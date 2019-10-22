@@ -1,5 +1,7 @@
 # Bizrev
 
+![](/public/screenshots/example.png)
+
 This application allows users to create, organize, monitor and review businesses.  This is a portfolio project per Flatiron School: Full Stack Web Development
 
 ## Getting started
@@ -16,9 +18,9 @@ Run app via starting a new server
 $ rails s
 ```
 
-Watch this video to learn more about app utilization. [link text](url).
+[Watch this video](url) to learn more about app utilization.
 
-View the blog about producing this app. [link text](url).
+[View the blog](https://carl1984r.github.io/) about producing this app.
 
 # Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/carl1984r/rails_portfolio_project.
