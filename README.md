@@ -27,7 +27,7 @@ $ rails s
 
 ```
 
-[Watch this video](url) to learn more about app utilization.
+[Watch this video](https://drive.google.com/open?id=1jdL31POvtJT2OFzK5bEn7cY6wJvJFnNh) to learn more about app utilization.
 
 [View the blog](https://carl1984r.github.io/) about producing this app.
 
