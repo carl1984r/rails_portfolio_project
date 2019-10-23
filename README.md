@@ -12,6 +12,12 @@ To get started, clone the repo - install the required gems:
 $ bundle install
 ```
 
+Then, migrate the database:
+
+```
+$ rake db:migrate
+```
+
 Run app via starting a new server
 
 ```
