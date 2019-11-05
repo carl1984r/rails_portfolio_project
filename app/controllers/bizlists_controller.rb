@@ -64,9 +64,9 @@ class BizlistsController < ApplicationController
    @bizlists = current_user.bizlists
    @businesses = Business.user_favs(current_user.id)
    if @businesses.empty?
-     flash[:no_fav_search_results] = "No biz marked as fav"
+     flash[:no_fav_search_results] = "No businesses marked as favorite"
    else
-     flash[:fav_biz] = "Biz marked as fav"
+     flash[:fav_biz] = "Business favorites"
    end
    render :index
  end
