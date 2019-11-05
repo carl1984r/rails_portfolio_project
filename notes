@@ -6,3 +6,6 @@ Business.joins(:reviews).where('reviews.created_at >= ?', 1.day.ago)
 
 @business.reviews.find_review(current_user.id)[0
 ].business_reviews[0]
+
+rails g migration add_status_to_business_reviews status:integer
+enum status: { false: 0, true: 1 }
