@@ -10,8 +10,10 @@ class Business < ApplicationRecord
   scope :search, -> (query) { where("name LIKE ?", "%" + query + "%") }
 
   scope :last_day, -> { joins(:reviews).where('reviews.created_at >= ?', 1.day.ago).uniq }
-  
+
   scope :user_favs, -> (query) { joins(:business_reviews).where('business_reviews.fav == ?', true).joins(:reviews).where('reviews.user_id == ?', query) }
+
+  scope :most_ratings, -> { joins(:business_reviews).group("business_reviews.business_id").order("count(business_reviews.business_id) DESC ")[0] }
 
   def overall_rating
       ((reviews.sum(&:average)/reviews.count)*10).ceil/10.0 unless reviews.empty?

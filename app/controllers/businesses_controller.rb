@@ -51,6 +51,12 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def most_ratings
+    @business = Business.most_ratings
+    flash[:most_business_ratings] = "Business with most ratings"
+    render :show
+  end
+
   private
 
   def business_params

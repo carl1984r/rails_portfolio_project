@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/biz_search', to: 'bizlists#search'
   get '/biz_favs', to: 'bizlists#favs'
+  get '/biz_most_ratings', to: 'businesses#most_ratings'
   get '/biz_filter_within_last_24_hours', to: 'bizlists#last_day'
   get '/remove_bizlist', to: 'bizlists#list_destroy'
   get '/add_biz_as_favorite', to: 'businesses#fav'
